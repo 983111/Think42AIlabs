@@ -12,6 +12,7 @@ import { Contact } from './pages/Contact';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
 import { Admin } from './pages/Admin';
+import { ScrollToTop } from './components/ScrollToTop';
 
 function Navigation() {
   const location = useLocation();
@@ -145,6 +146,7 @@ export default function App() {
   return (
     <HelmetProvider>
       <Router>
+        <ScrollToTop />
         <div className="flex min-h-screen flex-col bg-[#FAFAFA]">
           <Navigation />
           <main className="flex-grow">
