@@ -1,0 +1,30 @@
+{
+  "collections": [
+    {
+      "collection": "applications",
+      "description": "Stores membership applications",
+      "rules": "allow create: if true; allow read, update, delete: if false;",
+      "schema": {
+        "name": "string",
+        "email": "string",
+        "phone": "string",
+        "universityId": "string",
+        "department": "string",
+        "year": "string",
+        "cgpa": "string",
+        "linkedin": "string",
+        "github": "string",
+        "portfolio": "string",
+        "position": "string",
+        "team": "string",
+        "skills": "array",
+        "availability": "number",
+        "motivation": "string",
+        "cvURL": "string",
+        "submittedAt": "timestamp",
+        "status": "string"
+      },
+      "indexes": []
+    }
+  ]
+}
