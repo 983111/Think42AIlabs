@@ -15,8 +15,9 @@ export function Contact() {
       </div>
       <div className="mx-auto mt-16 max-w-xl sm:mt-20 text-center">
          <div className="flex flex-col gap-6 text-lg">
-            <p className="text-gray-900 font-medium">Email: <a href="mailto:hello@novamindai.org" className="text-blue-600 hover:underline">hello@novamindai.org</a></p>
-            <p className="text-gray-900 font-medium">LinkedIn: <a href="#" className="text-blue-600 hover:underline">NovaMind AI Society</a></p>
+            <p className="text-gray-900 font-medium">Email: <a href="mailto:kaelithnovamind@gmail.com" className="text-blue-600 hover:underline">kaelithnovamind@gmail.com</a></p>
+            <p className="text-gray-900 font-medium">LinkedIn: <a href="https://www.linkedin.com/in/kaelith-novamind-b6171041a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">NovaMind AI Society</a></p>
+            <p className="text-gray-900 font-medium">Instagram: <a href="https://www.instagram.com/kaelithnovamind?igsh=MTdjaHZuMmx1ZHdndQ==" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">@kaelithnovamind</a></p>
             <p className="text-gray-900 font-medium">GitHub: <a href="#" className="text-blue-600 hover:underline">novamind-ai</a></p>
          </div>
       </div>

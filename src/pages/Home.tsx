@@ -165,9 +165,9 @@ export function Home() {
                <h3 className="text-lg font-bold text-gray-900 mb-6">Latest from the Blog</h3>
                <div className="space-y-6 border-t border-gray-100 pt-4">
                  {[
-                   { title: 'How Students Can Start AI Research Without Prior Experience', date: 'May 12, 2024', read: '8 min read', img: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=200&q=80' },
-                   { title: 'AI Engineering vs AI Research: Key Differences Explained', date: 'May 05, 2024', read: '10 min read', img: 'https://images.unsplash.com/photo-1555949963-aa79dcee57d5?auto=format&fit=crop&w=200&q=80' },
-                   { title: 'Roadmap to Becoming an AI Engineer in College', date: 'Apr 28, 2024', read: '12 min read', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80' },
+                   { title: 'How Students Can Start AI Research Without Prior Experience', date: 'May 12, 2026', read: '8 min read', img: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=200&q=80' },
+                   { title: 'AI Engineering vs AI Research: Key Differences Explained', date: 'May 05, 2026', read: '10 min read', img: 'https://images.unsplash.com/photo-1555949963-aa79dcee57d5?auto=format&fit=crop&w=200&q=80' },
+                   { title: 'Roadmap to Becoming an AI Engineer in College', date: 'Apr 28, 2026', read: '12 min read', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80' },
                  ].map(blog => (
                    <Link to="/blogs" key={blog.title} className="flex items-center gap-6 group cursor-pointer">
                       <img src={blog.img} alt="" className="h-20 w-24 sm:w-32 rounded-lg object-cover bg-gray-100" />
