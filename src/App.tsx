@@ -115,7 +115,6 @@ function Footer() {
                   <li><a href="mailto:kaelithnovamind@gmail.com" className="text-sm leading-6 text-gray-600 hover:text-gray-900">kaelithnovamind@gmail.com</a></li>
                   <li><a href="https://www.linkedin.com/in/kaelith-novamind-b6171041a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="text-sm leading-6 text-gray-600 hover:text-gray-900">LinkedIn Profile</a></li>
                   <li><a href="https://www.instagram.com/kaelithnovamind?igsh=MTdjaHZuMmx1ZHdndQ==" target="_blank" rel="noopener noreferrer" className="text-sm leading-6 text-gray-600 hover:text-gray-900">Instagram Profile</a></li>
-                  <li><a href="#" className="text-sm leading-6 text-gray-600 hover:text-gray-900">github.com/novamind-society</a></li>
                 </ul>
                 <div className="mt-8">
                   <h3 className="text-sm font-semibold leading-6 text-gray-900">Subscribe to our newsletter</h3>

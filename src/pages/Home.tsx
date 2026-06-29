@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Users, FileText, Github, Trophy, BookOpen, Code, Lightbulb, Flag, ArrowRight, Cog, Camera, HeartPulse, ShieldAlert, Cpu } from 'lucide-react';
+import { Users, FileText, Trophy, BookOpen, Code, Lightbulb, Flag, ArrowRight, Cog, Camera, HeartPulse, ShieldAlert, Cpu } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export function Home() {
@@ -66,7 +66,7 @@ export function Home() {
       {/* Stats Section */}
       <div className="border-y border-gray-200 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-           <div className="grid grid-cols-2 gap-8 md:grid-cols-5 text-center">
+           <div className="grid grid-cols-2 gap-8 md:grid-cols-4 text-center">
              <div className="flex flex-col items-center">
                <Users className="h-6 w-6 text-gray-900 mb-3" />
                <span className="font-bold text-gray-900">Growing</span>
@@ -81,11 +81,6 @@ export function Home() {
                <FileText className="h-6 w-6 text-gray-900 mb-3" />
                <span className="font-bold text-gray-900">Growing</span>
                <span className="text-sm text-gray-500 mt-1">Research Papers</span>
-             </div>
-             <div className="flex flex-col items-center">
-               <Github className="h-6 w-6 text-gray-900 mb-3" />
-               <span className="font-bold text-gray-900">Growing</span>
-               <span className="text-sm text-gray-500 mt-1">GitHub Repositories</span>
              </div>
              <div className="flex flex-col items-center">
                <Trophy className="h-6 w-6 text-gray-900 mb-3" />
