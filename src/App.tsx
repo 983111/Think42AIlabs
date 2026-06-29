@@ -57,12 +57,14 @@ function Navigation() {
           </div>
         </div>
         <div className="flex items-center">
-          <Link
-            to="/join"
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSc20sMqe1_0s0vcYX6DzaokctBi1ZHL1GJ2n63FozV5QtQI7A/viewform?usp=dialog"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden rounded-lg bg-black px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-800 md:block"
           >
             Apply Now
-          </Link>
+          </a>
         </div>
       </div>
     </nav>

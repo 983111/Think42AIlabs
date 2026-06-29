@@ -20,12 +20,14 @@ export function Home() {
               NovaMind AI Society is a student-driven community advancing artificial intelligence through research, innovation, and real-world impact.
             </p>
             <div className="mt-8 sm:flex sm:justify-center lg:justify-start gap-4">
-              <Link
-                to="/join"
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSc20sMqe1_0s0vcYX6DzaokctBi1ZHL1GJ2n63FozV5QtQI7A/viewform?usp=dialog"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center rounded-lg bg-black px-6 py-3 text-base font-medium text-white hover:bg-gray-800"
               >
                 Apply Now <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </a>
               <Link
                 to="/projects"
                 className="mt-3 flex items-center justify-center rounded-lg border border-gray-300 bg-white px-6 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 sm:mt-0"
