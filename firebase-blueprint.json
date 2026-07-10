@@ -25,6 +25,16 @@
         "status": "string"
       },
       "indexes": []
+    },
+    {
+      "collection": "subscribers",
+      "description": "Stores newsletter subscribers",
+      "rules": "allow create: if true; allow read, update, delete: if false;",
+      "schema": {
+        "email": "string",
+        "subscribedAt": "timestamp"
+      },
+      "indexes": []
     }
   ]
 }

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from './firebase/config';
 import { cn } from './lib/utils';
 import { LogoHeader } from './components/Logo';
 import { Home } from './pages/Home';
@@ -71,14 +73,36 @@ function Footer() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
     setStatus('submitting');
-    setTimeout(() => {
+    try {
+      await addDoc(collection(db, 'subscribers'), {
+        email: email,
+        subscribedAt: serverTimestamp()
+      });
       setStatus('success');
       setEmail('');
-    }, 800);
+    } catch (error) {
+      console.error('Newsletter subscription error:', error);
+      setStatus('idle');
+      const errInfo = {
+        error: error instanceof Error ? error.message : String(error),
+        authInfo: {
+          userId: null,
+          email: null,
+          emailVerified: null,
+          isAnonymous: null,
+          tenantId: null,
+          providerInfo: []
+        },
+        operationType: 'write',
+        path: 'subscribers'
+      };
+      console.error('Firestore Error: ', JSON.stringify(errInfo));
+      alert('Subscription failed. Please try again.');
+    }
   };
 
   return (
