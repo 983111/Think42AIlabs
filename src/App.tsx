@@ -1,9 +1,12 @@
+import React, { useState } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { cn } from './lib/utils';
+import { LogoHeader } from './components/Logo';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Leadership } from './pages/Leadership';
+import { Guidelines } from './pages/Guidelines';
 import { Projects } from './pages/Projects';
 import { Research } from './pages/Research';
 import { Blogs } from './pages/Blogs';
@@ -29,15 +32,8 @@ function Navigation() {
     <nav className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
-          <Link to="/" className="flex items-center gap-2 text-xl font-bold tracking-tight text-gray-900">
-            {/* Logo placeholder */}
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-            </svg>
-            <div className="flex flex-col leading-none">
-              <span>NovaMind</span>
-              <span className="text-[10px] font-medium tracking-widest text-gray-500 uppercase mt-1">AI Society</span>
-            </div>
+          <Link to="/" className="flex items-center">
+            <LogoHeader />
           </Link>
         </div>
         <div className="hidden md:block">
@@ -72,19 +68,26 @@ function Navigation() {
 }
 
 function Footer() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    setStatus('submitting');
+    setTimeout(() => {
+      setStatus('success');
+      setEmail('');
+    }, 800);
+  };
+
   return (
     <footer className="border-t border-gray-200 bg-white">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="xl:grid xl:grid-cols-4 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            <Link to="/" className="flex items-center gap-2 text-xl font-bold tracking-tight text-gray-900">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-              </svg>
-              <div className="flex flex-col leading-none">
-                <span>NovaMind</span>
-                <span className="text-[10px] font-medium tracking-widest text-gray-500 uppercase mt-1">AI Society</span>
-              </div>
+            <Link to="/" className="flex items-center">
+              <LogoHeader />
             </Link>
             <p className="text-sm leading-6 text-gray-500">
               A student-driven AI research and innovation community building the future through knowledge, collaboration, and impact.
@@ -105,7 +108,8 @@ function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">Community</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   <li><Link to="/join" className="text-sm leading-6 text-gray-600 hover:text-gray-900">Join Us</Link></li>
-                  <li><Link to="/leadership" className="text-sm leading-6 text-gray-600 hover:text-gray-900">Leadership</Link></li>
+                  <li><Link to="/leadership" className="text-sm leading-6 text-gray-600 hover:text-gray-900">Members</Link></li>
+                  <li><Link to="/guidelines" className="text-sm leading-6 text-gray-600 hover:text-gray-900">Guidelines</Link></li>
                   <li><Link to="/contact" className="text-sm leading-6 text-gray-600 hover:text-gray-900">Contact</Link></li>
                 </ul>
               </div>
@@ -120,13 +124,46 @@ function Footer() {
                 </ul>
                 <div className="mt-8">
                   <h3 className="text-sm font-semibold leading-6 text-gray-900">Subscribe to our newsletter</h3>
-                  <form className="mt-4 sm:flex sm:max-w-md" onSubmit={(e) => { e.preventDefault(); alert('Thanks for subscribing!'); }}>
-                    <label htmlFor="email-address" className="sr-only">Email address</label>
-                    <input type="email" name="email-address" id="email-address" required className="w-full min-w-0 appearance-none rounded-md border-0 bg-white px-3 py-1.5 text-base text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black sm:w-64 sm:text-sm sm:leading-6 xl:w-full" placeholder="Enter your email" />
-                    <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
-                      <button type="submit" className="flex w-full items-center justify-center rounded-md bg-black px-3 py-2 text-sm font-semibold text-white hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">Subscribe</button>
+                  {status === 'success' ? (
+                    <div className="mt-4 rounded-md bg-green-50 p-4 border border-green-200 sm:max-w-md">
+                      <div className="flex">
+                        <div className="flex-shrink-0">
+                          <svg className="h-5 w-5 text-green-500 animate-bounce" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <div className="ml-3">
+                          <p className="text-sm font-medium text-green-800">
+                            Thanks for subscribing! Check your inbox soon.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </form>
+                  ) : (
+                    <form className="mt-4 sm:flex sm:max-w-md" onSubmit={handleSubmit}>
+                      <label htmlFor="email-address" className="sr-only">Email address</label>
+                      <input 
+                        type="email" 
+                        name="email-address" 
+                        id="email-address" 
+                        required 
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        disabled={status === 'submitting'}
+                        className="w-full min-w-0 appearance-none rounded-md border-0 bg-white px-3 py-1.5 text-base text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black sm:w-64 sm:text-sm sm:leading-6 xl:w-full" 
+                        placeholder="Enter your email" 
+                      />
+                      <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
+                        <button 
+                          type="submit" 
+                          disabled={status === 'submitting'}
+                          className="flex w-full items-center justify-center rounded-md bg-black px-3 py-2 text-sm font-semibold text-white hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:bg-gray-400"
+                        >
+                          {status === 'submitting' ? 'Subscribing...' : 'Subscribe'}
+                        </button>
+                      </div>
+                    </form>
+                  )}
                 </div>
               </div>
             </div>
@@ -164,6 +201,7 @@ export default function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/admin" element={<Admin />} />
+              <Route path="/guidelines" element={<Guidelines />} />
             </Routes>
           </main>
           <Footer />

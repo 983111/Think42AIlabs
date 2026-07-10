@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Users, FileText, Trophy, BookOpen, Code, Lightbulb, Flag, ArrowRight, Cog, Camera, HeartPulse, ShieldAlert, Cpu } from 'lucide-react';
 import { SEO } from '../components/SEO';
+import { LogoFull } from '../components/Logo';
 
 export function Home() {
   return (
@@ -34,17 +35,6 @@ export function Home() {
               >
                 Explore Projects
               </Link>
-            </div>
-            <div className="mt-8 flex items-center justify-center lg:justify-start gap-4">
-               <div className="flex -space-x-2">
-                  <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
-                  <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
-                  <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
-                  <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
-               </div>
-               <p className="text-sm text-gray-500 text-left">
-                 Join a community of<br/>passionate builders and researchers.
-               </p>
             </div>
           </div>
           <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-7 lg:flex lg:items-center">
@@ -129,32 +119,23 @@ export function Home() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 border-t border-gray-200 pt-16">
             
-            {/* Focus Areas */}
-            <div>
-               <h3 className="text-lg font-bold text-gray-900 mb-6">Current Focus Areas</h3>
-               <ul className="space-y-4 divide-y divide-gray-100 border-t border-gray-100">
-                  {[
-                    { name: 'Machine Learning', icon: Cog },
-                    { name: 'Natural Language Processing', icon: FileText },
-                    { name: 'Computer Vision', icon: Camera },
-                    { name: 'AI for Healthcare', icon: HeartPulse },
-                    { name: 'Robotics & Automation', icon: Cpu },
-                    { name: 'AI Safety & Ethics', icon: ShieldAlert }
-                  ].map(area => (
-                    <Link to="/projects" key={area.name} className="pt-4 flex items-center justify-between group cursor-pointer">
-                      <div className="flex items-center gap-3">
-                         <div className="flex items-center justify-center">
-                           <area.icon className="h-5 w-5 text-gray-400 group-hover:text-gray-900 transition-colors" />
-                         </div>
-                         <span className="text-sm font-medium text-gray-900">{area.name}</span>
-                      </div>
-                      <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-gray-900 transition-colors" />
-                    </Link>
-                  ))}
-               </ul>
-               <Link to="/projects" className="mt-8 inline-flex items-center text-sm font-semibold text-gray-900 hover:text-gray-600">
-                 View all research areas <ArrowRight className="ml-1 h-4 w-4" />
-               </Link>
+            {/* Explore Projects Call to Action */}
+            <div className="flex flex-col justify-between rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+               <div>
+                 <LogoFull className="mb-6" />
+                 <h3 className="text-xl font-bold text-gray-900 text-center mt-4">Flagship AI Workspace & Systems</h3>
+                 <p className="mt-4 text-sm text-gray-600 text-center leading-relaxed">
+                   We design, build, and deploy production-quality tools and conduct cutting-edge research. Explore our active projects, including our revolutionary AI student counselor platform, crop disease diagnostic models, and natural language workspace automation systems.
+                 </p>
+               </div>
+               <div className="mt-8 text-center">
+                 <Link 
+                   to="/projects" 
+                   className="inline-flex items-center justify-center rounded-lg bg-black px-6 py-3 text-sm font-semibold text-white hover:bg-gray-800 transition-colors w-full sm:w-auto"
+                 >
+                   Explore All Flagship Projects <ArrowRight className="ml-2 h-4 w-4" />
+                 </Link>
+               </div>
             </div>
 
             {/* Latest Blog */}
@@ -162,12 +143,12 @@ export function Home() {
                <h3 className="text-lg font-bold text-gray-900 mb-6">Latest from the Blog</h3>
                <div className="space-y-6 border-t border-gray-100 pt-4">
                  {[
-                   { title: 'How Students Can Start AI Research Without Prior Experience', date: 'May 12, 2026', read: '8 min read', img: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=200&q=80' },
-                   { title: 'AI Engineering vs AI Research: Key Differences Explained', date: 'May 05, 2026', read: '10 min read', img: 'https://images.unsplash.com/photo-1555949963-aa79dcee57d5?auto=format&fit=crop&w=200&q=80' },
-                   { title: 'Roadmap to Becoming an AI Engineer in College', date: 'Apr 28, 2026', read: '12 min read', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80' },
+                   { slug: 'start-ai-research', title: 'How Students Can Start AI Research Without Prior Experience', date: 'May 12, 2026', read: '8 min read', img: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=200&q=80' },
+                   { slug: 'ai-engineering-vs-research', title: 'AI Engineering vs AI Research: Key Differences Explained', date: 'May 05, 2026', read: '10 min read', img: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=200&q=80' },
+                   { slug: 'roadmap-to-ai-engineer', title: 'Roadmap to Becoming an AI Engineer in College', date: 'Apr 28, 2026', read: '12 min read', img: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=200&q=80' },
                  ].map(blog => (
-                   <Link to="/blogs" key={blog.title} className="flex items-center gap-6 group cursor-pointer">
-                      <img src={blog.img} alt="" className="h-20 w-24 sm:w-32 rounded-lg object-cover bg-gray-100" />
+                   <Link to={`/blogs?post=${blog.slug}`} key={blog.title} className="flex items-center gap-6 group cursor-pointer">
+                      <img src={blog.img} alt="" className="h-20 w-24 sm:w-32 rounded-lg object-cover bg-gray-100 flex-shrink-0" referrerPolicy="no-referrer" />
                       <div>
                         <h4 className="text-sm font-semibold text-gray-900 group-hover:text-gray-600 line-clamp-2">{blog.title}</h4>
                         <div className="mt-2 flex items-center text-xs text-gray-500 gap-2">
