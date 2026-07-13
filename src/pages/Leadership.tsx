@@ -1,6 +1,5 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-import { Users, Cpu, Shield, Code, Globe } from 'lucide-react';
 
 interface Member {
   name: string;
@@ -11,7 +10,7 @@ interface Team {
   id: string;
   name: string;
   description: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: (props: { className?: string }) => React.JSX.Element;
   colorClass: {
     badge: string;
     avatar: string;
@@ -22,13 +21,83 @@ interface Team {
   members: Member[];
 }
 
+// Custom high-end premium geometric emblems to replace generic basic icons
+function LeadershipLogo({ className = "h-6 w-6" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" className={`${className} transition-all duration-300`} fill="none" stroke="currentColor" strokeWidth="1.5">
+      <polygon points="50,15 82,32 82,68 50,85 18,68 18,32" strokeLinecap="round" strokeLinejoin="round" />
+      <polygon points="50,22 76,37 76,63 50,78 24,63 24,37" strokeLinecap="round" strokeLinejoin="round" className="opacity-40" />
+      <path d="M50,36 L53,46 L63,49 L53,52 L50,62 L47,52 L37,49 L47,46 Z" fill="currentColor" />
+    </svg>
+  );
+}
+
+function ResearchLogo({ className = "h-6 w-6" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" className={`${className} transition-all duration-300`} fill="none" stroke="currentColor" strokeWidth="1.5">
+      <circle cx="50" cy="50" r="36" className="opacity-20" />
+      <ellipse cx="50" cy="50" rx="36" ry="12" transform="rotate(35 50 50)" />
+      <ellipse cx="50" cy="50" rx="36" ry="12" transform="rotate(-35 50 50)" />
+      <circle cx="50" cy="50" r="8" fill="currentColor" />
+      <circle cx="19" cy="30" r="4.5" fill="currentColor" />
+      <circle cx="81" cy="70" r="4.5" fill="currentColor" />
+    </svg>
+  );
+}
+
+function MLLogo({ className = "h-6 w-6" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" className={`${className} transition-all duration-300`} fill="none" stroke="currentColor" strokeWidth="1.5">
+      <circle cx="30" cy="30" r="5" fill="currentColor" />
+      <circle cx="30" cy="50" r="5" fill="currentColor" />
+      <circle cx="30" cy="70" r="5" fill="currentColor" />
+      
+      <circle cx="70" cy="40" r="5" fill="currentColor" />
+      <circle cx="70" cy="60" r="5" fill="currentColor" />
+      
+      <line x1="35" y1="30" x2="65" y2="40" strokeLinecap="round" className="opacity-60" />
+      <line x1="35" y1="50" x2="65" y2="40" strokeLinecap="round" />
+      <line x1="35" y1="70" x2="65" y2="40" strokeLinecap="round" className="opacity-40" />
+      <line x1="35" y1="30" x2="65" y2="60" strokeLinecap="round" className="opacity-40" />
+      <line x1="35" y1="50" x2="65" y2="60" strokeLinecap="round" />
+      <line x1="35" y1="70" x2="65" y2="60" strokeLinecap="round" className="opacity-60" />
+    </svg>
+  );
+}
+
+function SWELogo({ className = "h-6 w-6" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" className={`${className} transition-all duration-300`} fill="none" stroke="currentColor" strokeWidth="1.5">
+      <polygon points="50,16 84,35 84,65 50,84 16,65 16,35" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M16,35 L50,54 L84,35" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M50,54 V84" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="50" cy="34" r="3.5" fill="currentColor" />
+      <circle cx="33" cy="62" r="3.5" fill="currentColor" />
+      <circle cx="67" cy="62" r="3.5" fill="currentColor" />
+    </svg>
+  );
+}
+
+function WebLogo({ className = "h-6 w-6" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" className={`${className} transition-all duration-300`} fill="none" stroke="currentColor" strokeWidth="1.5">
+      <circle cx="50" cy="50" r="35" />
+      <circle cx="50" cy="50" r="18" strokeDasharray="3 3" />
+      <line x1="15" y1="50" x2="85" y2="50" />
+      <line x1="50" y1="15" x2="50" y2="85" />
+      <path d="M25,25 C35,35 65,35 75,25" strokeLinecap="round" className="opacity-60" />
+      <path d="M25,75 C35,65 65,65 75,75" strokeLinecap="round" className="opacity-60" />
+    </svg>
+  );
+}
+
 export function Leadership() {
   const teams: Team[] = [
     {
       id: 'leadership',
       name: 'Core Leadership & Operations',
       description: 'Steering the overall vision, operational alignment, and strategic growth of the organization.',
-      icon: Shield,
+      icon: LeadershipLogo,
       colorClass: {
         badge: 'bg-indigo-50 text-indigo-700 border-indigo-200',
         avatar: 'bg-indigo-50 border-indigo-100 text-indigo-600',
@@ -45,7 +114,7 @@ export function Leadership() {
       id: 'research',
       name: 'AI Research Team',
       description: 'Advancing the frontiers of artificial intelligence through scholarly publications, paper replications, and foundational research.',
-      icon: Cpu,
+      icon: ResearchLogo,
       colorClass: {
         badge: 'bg-purple-50 text-purple-700 border-purple-200',
         avatar: 'bg-purple-50 border-purple-100 text-purple-600',
@@ -55,16 +124,17 @@ export function Leadership() {
       },
       members: [
         { name: 'Muhammad Safwan Ahmad Saffi', role: 'Research Member' },
-        { name: 'harshit', role: 'Research Member' },
+        { name: 'Harshit', role: 'Research Member' },
         { name: 'Lamar Ahmed Al-Labban', role: 'Research Member' },
-        { name: 'Muhammad Abdullah', role: 'Research Member' }
+        { name: 'Muhammad Abdullah', role: 'Research Member' },
+        { name: 'Mutuyimana Eugene', role: 'Research Member' }
       ]
     },
     {
       id: 'ml',
       name: 'Machine Learning Team',
       description: 'Developing and training sophisticated machine learning algorithms and deep neural networks to solve complex problems.',
-      icon: Users,
+      icon: MLLogo,
       colorClass: {
         badge: 'bg-rose-50 text-rose-700 border-rose-200',
         avatar: 'bg-rose-50 border-rose-100 text-rose-600',
@@ -86,7 +156,7 @@ export function Leadership() {
       id: 'swe',
       name: 'Software Engineering Team',
       description: 'Building reliable, scalable, and production-quality software architectures and system-level applications.',
-      icon: Code,
+      icon: SWELogo,
       colorClass: {
         badge: 'bg-amber-50 text-amber-700 border-amber-200',
         avatar: 'bg-amber-50 border-amber-100 text-amber-600',
@@ -99,15 +169,16 @@ export function Leadership() {
         { name: 'Syrin Alabrach', role: 'Team Leader & Design Lead' },
         { name: 'Kundan Kumar', role: 'Team Member' },
         { name: 'Chukwuma Pascal Onuoha', role: 'Team Member' },
-        { name: 'Ishimwe bonheur', role: 'Team Member' },
-        { name: 'Iragena Aime Divin', role: 'Team Member' }
+        { name: 'Ishimwe Bonheur', role: 'Team Member' },
+        { name: 'Iragena Aime Divin', role: 'Team Member' },
+        { name: 'Nyampundu Belyse', role: 'Team Member' }
       ]
     },
     {
       id: 'web',
       name: 'Web Development Team',
       description: 'Crafting highly polished, accessible, and user-centric web platforms and interactive applications.',
-      icon: Globe,
+      icon: WebLogo,
       colorClass: {
         badge: 'bg-teal-50 text-teal-700 border-teal-200',
         avatar: 'bg-teal-50 border-teal-100 text-teal-600',
@@ -160,12 +231,12 @@ export function Leadership() {
                 <button
                   key={team.id}
                   onClick={() => scrollToTeam(team.id)}
-                  className="flex flex-col items-center justify-between rounded-xl border border-gray-200 bg-white p-4 text-center shadow-sm hover:shadow-md hover:border-gray-300 transition-all cursor-pointer group"
+                  className="flex flex-col items-center justify-between rounded-xl border border-gray-200 bg-white p-4 text-center shadow-sm hover:shadow-md hover:border-gray-300 transition-all cursor-pointer group text-left"
                 >
-                  <div className={`rounded-lg p-2 ${team.colorClass.avatar} mb-3 group-hover:scale-110 transition-transform`}>
+                  <div className={`rounded-lg p-2.5 ${team.colorClass.avatar} mb-3 group-hover:scale-110 transition-all duration-300 flex items-center justify-center`}>
                     <team.icon className="h-5 w-5" />
                   </div>
-                  <span className="text-xs font-bold text-gray-900 line-clamp-1">{team.name.replace(' Team', '')}</span>
+                  <span className="text-xs font-bold text-gray-900 line-clamp-1 text-center">{team.name.replace(' Team', '')}</span>
                   <span className={`mt-2 inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-semibold border ${team.colorClass.badge}`}>
                     {team.members.length} {team.members.length === 1 ? 'member' : 'members'}
                   </span>
@@ -189,7 +260,7 @@ export function Leadership() {
               {/* Left Column: Team Identity & Description */}
               <div className="lg:pr-8">
                 <div className="flex items-center gap-3">
-                  <div className={`rounded-xl p-3 border ${team.colorClass.avatar}`}>
+                  <div className={`rounded-xl p-3 border ${team.colorClass.avatar} flex items-center justify-center`}>
                     <team.icon className="h-6 w-6" />
                   </div>
                   <span className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold border ${team.colorClass.badge}`}>
