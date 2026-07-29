@@ -4,6 +4,7 @@ import { SEO } from '../components/SEO';
 interface Member {
   name: string;
   role: string;
+  image?: string; // path to photo, e.g. '/images/team/first-last.jpg'. Leave undefined to show initials.
 }
 
 interface Team {
@@ -123,11 +124,14 @@ export function Leadership() {
         hoverBorder: 'hover:border-purple-200',
       },
       members: [
-        { name: 'Muhammad Safwan Ahmad Saffi', role: 'Research Member' },
+        { name: 'Muhammad Safwan Ahmad Saffi', role: 'Research Member', image: '/images/team/muhammad-safwan-ahmad-saffi.jpg' },
         { name: 'Harshit', role: 'Research Member' },
         { name: 'Lamar Ahmed Al-Labban', role: 'Research Member' },
         { name: 'Muhammad Abdullah', role: 'Research Member' },
-        { name: 'Mutuyimana Eugene', role: 'Research Member' }
+        { name: 'Mutuyimana Eugene', role: 'Research Member', image: '/images/team/mutuyimana-eugene.jpg' },
+        // --- Added from interest-form responses ---
+        { name: 'Anirudh Nallajarla', role: 'Research Member' },
+        { name: 'Om Mahadik', role: 'Research Member', image: '/images/team/om-mahadik.jpg' }
       ]
     },
     {
@@ -145,11 +149,13 @@ export function Leadership() {
       members: [
         { name: 'Anuj kumar', role: 'Team Leader' },
         { name: 'Alnoor Ismail', role: 'Team Member' },
-        { name: 'Owojori Oluwajuwonlo Emmanuel', role: 'Team Member' },
+        { name: 'Owojori Oluwajuwonlo Emmanuel', role: 'Team Member', image: '/images/team/owojori-oluwajuwonlo-emmanuel.jpg' },
         { name: 'Thisum Samarasinghe', role: 'Team Member' },
         { name: 'Schalom GANDONOU', role: 'Team Member' },
         { name: 'Tanishka Arora', role: 'Team Member' },
-        { name: 'Habib Bashir Lawal', role: 'Team Member' }
+        { name: 'Habib Bashir Lawal', role: 'Team Member', image: '/images/team/habib-bashir-lawal.jpg' },
+        // --- Added from interest-form responses ---
+        { name: 'Sagid Abdulla MohammedAli', role: 'Team Member' }
       ]
     },
     {
@@ -166,12 +172,16 @@ export function Leadership() {
       },
       members: [
         { name: 'Vieira Isimbi Ntwali', role: 'Vice President of Organization' },
-        { name: 'Syrin Alabrach', role: 'Team Leader & Design Lead' },
-        { name: 'Kundan Kumar', role: 'Team Member' },
+        { name: 'Syrin Alabrach', role: 'Team Leader & Design Lead', image: '/images/team/syrin-alabrach.jpg' },
+        { name: 'Kundan Kumar', role: 'Team Member', image: '/images/team/kundan-kumar.jpg' },
         { name: 'Chukwuma Pascal Onuoha', role: 'Team Member' },
         { name: 'Ishimwe Bonheur', role: 'Team Member' },
         { name: 'Iragena Aime Divin', role: 'Team Member' },
-        { name: 'Nyampundu Belyse', role: 'Team Member' }
+        { name: 'Nyampundu Belyse', role: 'Team Member' },
+        // --- Added from interest-form responses ---
+        { name: 'KALIZA Esther', role: 'Team Member', image: '/images/team/kaliza-esther.jpg' },
+        { name: 'Jean Pierre Hitayezu', role: 'Team Member', image: '/images/team/jean-pierre-hitayezu.jpg' },
+        { name: 'Jackson NSANZIMANA', role: 'Team Member', image: '/images/team/jackson-nsanzimana.jpg' }
       ]
     },
     {
@@ -283,9 +293,17 @@ export function Leadership() {
                       key={member.name} 
                       className={`flex items-center gap-x-4 rounded-2xl border ${team.colorClass.border} ${team.colorClass.hoverBorder} bg-[#FAFAFA] p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:bg-white`}
                     >
-                      <div className={`h-12 w-12 rounded-full border flex items-center justify-center font-bold text-base flex-shrink-0 select-none ${team.colorClass.avatar}`}>
-                        {member.name.charAt(0).toUpperCase()}
-                      </div>
+                      {member.image ? (
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className={`h-12 w-12 rounded-full border object-cover flex-shrink-0 ${team.colorClass.avatar}`}
+                        />
+                      ) : (
+                        <div className={`h-12 w-12 rounded-full border flex items-center justify-center font-bold text-base flex-shrink-0 select-none ${team.colorClass.avatar}`}>
+                          {member.name.charAt(0).toUpperCase()}
+                        </div>
+                      )}
                       <div className="min-w-0">
                         <h4 className="text-base font-bold tracking-tight text-gray-900 truncate">
                           {member.name}
