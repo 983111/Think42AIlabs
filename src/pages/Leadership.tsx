@@ -128,10 +128,10 @@ export function Leadership() {
         { name: 'Harshit', role: 'Research Member' },
         { name: 'Lamar Ahmed Al-Labban', role: 'Research Member' },
         { name: 'Muhammad Abdullah', role: 'Research Member' },
-        { name: 'Mutuyimana Eugene', role: 'Research Member', image: '/images/team/mutuyimana-eugene.jpg' },
+        { name: 'Mutuyimana Eugene', role: 'Research Member', image: '/images/team/Eugene Mutuyimana.jpg' },
         // --- Added from interest-form responses ---
         { name: 'Anirudh Nallajarla', role: 'Research Member' },
-        { name: 'Om Mahadik', role: 'Research Member', image: '/images/team/om-mahadik.jpg' }
+        { name: 'Om Mahadik', role: 'Research Member', image: '/images/team/Om Mahadik.jpg' }
       ]
     },
     {
@@ -149,11 +149,11 @@ export function Leadership() {
       members: [
         { name: 'Anuj kumar', role: 'Team Leader' },
         { name: 'Alnoor Ismail', role: 'Team Member' },
-        { name: 'Owojori Oluwajuwonlo Emmanuel', role: 'Team Member', image: '/images/team/owojori-oluwajuwonlo-emmanuel.jpg' },
+        { name: 'Owojori Oluwajuwonlo Emmanuel', role: 'Team Member', image: '/images/team/Owojori Oluwajuwonlo Emmanuel.jpg' },
         { name: 'Thisum Samarasinghe', role: 'Team Member' },
         { name: 'Schalom GANDONOU', role: 'Team Member' },
         { name: 'Tanishka Arora', role: 'Team Member' },
-        { name: 'Habib Bashir Lawal', role: 'Team Member', image: '/images/team/habib-bashir-lawal.jpg' },
+        { name: 'Habib Bashir Lawal', role: 'Team Member', image: '/images/team/Habib Bashir Lawal.jpg' },
         // --- Added from interest-form responses ---
         { name: 'Sagid Abdulla MohammedAli', role: 'Team Member' }
       ]
@@ -172,16 +172,16 @@ export function Leadership() {
       },
       members: [
         { name: 'Vieira Isimbi Ntwali', role: 'Vice President of Organization' },
-        { name: 'Syrin Alabrach', role: 'Team Leader & Design Lead', image: '/images/team/syrin-alabrach.jpg' },
-        { name: 'Kundan Kumar', role: 'Team Member', image: '/images/team/kundan-kumar.jpg' },
+        { name: 'Syrin Alabrach', role: 'Team Leader & Design Lead', image: '/images/team/Syrin Alabrach.jpg' },
+        { name: 'Kundan Kumar', role: 'Team Member', image: '/images/team/Kundan Kumar.jpg' },
         { name: 'Chukwuma Pascal Onuoha', role: 'Team Member' },
         { name: 'Ishimwe Bonheur', role: 'Team Member' },
         { name: 'Iragena Aime Divin', role: 'Team Member' },
         { name: 'Nyampundu Belyse', role: 'Team Member' },
         // --- Added from interest-form responses ---
-        { name: 'KALIZA Esther', role: 'Team Member', image: '/images/team/kaliza-esther.jpg' },
-        { name: 'Jean Pierre Hitayezu', role: 'Team Member', image: '/images/team/jean-pierre-hitayezu.jpg' },
-        { name: 'Jackson NSANZIMANA', role: 'Team Member', image: '/images/team/jackson-nsanzimana.jpg' }
+        { name: 'KALIZA Esther', role: 'Team Member', image: '/images/team/KALIZA Esther.jpg' },
+        { name: 'Jean Pierre Hitayezu', role: 'Team Member', image: '/images/team/Jean Pierre Hitayezu.jpg' },
+        { name: 'Jackson NSANZIMANA', role: 'Team Member', image: '/images/team/Jackson NSANZIMANA.jpg' }
       ]
     },
     {
