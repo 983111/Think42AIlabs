@@ -142,7 +142,8 @@ function Footer() {
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">Connect</h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  <li><a href="mailto:think42ailabs@gmail.com" className="text-sm leading-6 text-gray-600 hover:text-gray-900">think42ailabs@gmail.com</a></li>
+                  <li><a href="mailto:hello@think42ai.com" className="text-sm leading-6 text-gray-600 hover:text-gray-900">hello@think42ai.com</a></li>
+main
                 </ul>
                 <div className="mt-8">
                   <h3 className="text-sm font-semibold leading-6 text-gray-900">Subscribe to our newsletter</h3>

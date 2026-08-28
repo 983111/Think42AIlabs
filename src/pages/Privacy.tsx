@@ -42,7 +42,11 @@ export function Privacy() {
 
         <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Contact</h2>
         <p className="mt-6">
+
           For any privacy-related questions, please contact us at think42ailabs@gmail.com.
+
+          For any privacy-related questions, please contact us at privacy@think42ai.com.
+ main
         </p>
       </div>
     </div>
