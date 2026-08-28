@@ -8,7 +8,7 @@ interface SEOProps {
 }
 
 export function SEO({ title, description, canonicalUrl, type = 'website' }: SEOProps) {
-  const siteTitle = `${title} | NovaMind AI Society`;
+  const siteTitle = `${title} | Think 42 AI lab`;
   return (
     <Helmet>
       <title>{siteTitle}</title>

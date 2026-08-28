@@ -3,11 +3,11 @@ import { SEO } from '../components/SEO';
 export function Guidelines() {
   return (
     <div className="bg-white px-6 py-32 lg:px-8">
-      <SEO title="Guidelines & Code of Conduct" description="Member guidelines and code of conduct for NovaMind AI Society." />
+      <SEO title="Guidelines & Code of Conduct" description="Member guidelines and code of conduct for Think 42 AI lab." />
       <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Member Guidelines & Code of Conduct</h1>
         <p className="mt-6 text-xl leading-8 text-gray-700">
-          Welcome to KaelithNovaMind AI. Our community is built around collaboration, innovation, research, and building technology that creates real-world impact. Every member is expected to maintain professionalism and contribute consistently throughout the program.
+          Welcome to Think 42 AI lab. Our community is built around collaboration, innovation, research, and building technology that creates real-world impact. Every member is expected to maintain professionalism and contribute consistently throughout the program.
         </p>
 
         <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">1. Commitment</h2>
@@ -77,7 +77,7 @@ export function Guidelines() {
         </ul>
 
         <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">10. Growth Mindset</h2>
-        <p className="mt-4">KaelithNovaMind AI values learning. Members are encouraged to:</p>
+        <p className="mt-4">Think 42 AI lab values learning. Members are encouraged to:</p>
         <ul role="list" className="mt-4 list-disc space-y-2 pl-6">
           <li>Ask questions.</li>
           <li>Learn new technologies.</li>

@@ -3,11 +3,11 @@ import { SEO } from '../components/SEO';
 export function Research() {
   return (
     <div className="bg-white px-6 py-32 lg:px-8">
-      <SEO title="Research" description="Discover our reading groups, paper discussions, and active research opportunities at NovaMind AI Society." />
+      <SEO title="Research" description="Discover our reading groups, paper discussions, and active research opportunities at Think 42 AI lab." />
       <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Research Operations</h1>
         <p className="mt-6 text-xl leading-8 text-gray-700">
-          At NovaMind, research is at the core of what we do. We aim to bridge the gap between theoretical understanding and practical implementation.
+          At Think 42 AI lab, research is at the core of what we do. We aim to bridge the gap between theoretical understanding and practical implementation.
         </p>
 
         <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Reading Groups</h2>

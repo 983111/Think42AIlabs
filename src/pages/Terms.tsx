@@ -3,7 +3,7 @@ import { SEO } from '../components/SEO';
 export function Terms() {
   return (
     <div className="bg-white px-6 py-32 lg:px-8">
-      <SEO title="Terms of Service" description="Terms of Service for NovaMind AI Society. Read our membership eligibility, code of conduct, and guidelines." />
+      <SEO title="Terms of Service" description="Terms of Service for Think 42 AI lab. Read our membership eligibility, code of conduct, and guidelines." />
       <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Terms of Service</h1>
         <p className="mt-6 text-xl leading-8 text-gray-700">
@@ -12,7 +12,7 @@ export function Terms() {
 
         <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Eligibility</h2>
         <p className="mt-6">
-          Membership in the NovaMind AI Society is subject to review and approval. You must be an active student at the university to apply for standard roles.
+          Membership in Think 42 AI lab is subject to review and approval. You must be an active student at the university to apply for standard roles.
         </p>
 
         <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Accuracy of Information</h2>
@@ -27,7 +27,7 @@ export function Terms() {
 
         <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Intellectual Property</h2>
         <p className="mt-6">
-          The content on this website, including logos, text, and structure, is the property of NovaMind AI Society.
+          The content on this website, including logos, text, and structure, is the property of Think 42 AI lab.
         </p>
 
         <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Admissions</h2>
@@ -42,7 +42,7 @@ export function Terms() {
 
         <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Limitation of Liability</h2>
         <p className="mt-6">
-          The NovaMind AI Society shall not be liable for any indirect, incidental, or consequential damages arising from your use of the website or participation in the society.
+          Think 42 AI lab shall not be liable for any indirect, incidental, or consequential damages arising from your use of the website or participation in the lab.
         </p>
         
         <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Updates</h2>

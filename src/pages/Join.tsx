@@ -15,7 +15,7 @@ export function Join() {
 
   return (
     <div className="bg-[#FAFAFA] min-h-[60vh] flex items-center justify-center px-6 py-24">
-      <SEO title="Apply Now" description="Apply to join NovaMind AI Society. Submit your application via our Google Form." />
+      <SEO title="Apply Now" description="Apply to join Think 42 AI lab. Submit your application via our Google Form." />
       
       <div className="mx-auto max-w-md w-full bg-white border border-gray-200 rounded-2xl p-8 shadow-sm text-center">
         <div className="flex justify-center mb-6">
@@ -39,7 +39,7 @@ export function Join() {
         </a>
 
         <div className="mt-6 text-xs text-gray-400">
-          NovaMind AI Society • Application Form 2026
+          Think 42 AI lab • Application Form 2026
         </div>
       </div>
     </div>
