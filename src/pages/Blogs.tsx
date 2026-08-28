@@ -89,7 +89,7 @@ export function Blogs() {
 
           <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Step 4: Reach Out to Mentors</h3>
           <p className="mb-4">
-            Once you have successfully replicated a paper's results, write a short, highly professional 1-page summary of your replication, along with 2 suggestions for potential extensions. Send this to researchers and local student groups like <strong>KaelithNovaMind AI</strong>. You will be shocked by how eager researchers are to collaborate with students who take proactive, self-directed initiative!
+            Once you have successfully replicated a paper's results, write a short, highly professional 1-page summary of your replication, along with 2 suggestions for potential extensions. Send this to researchers and local student groups like <strong>Think 42 AI lab</strong>. You will be shocked by how eager researchers are to collaborate with students who take proactive, self-directed initiative!
           </p>
         </div>
       )
@@ -237,7 +237,7 @@ export function Blogs() {
 
           <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Your Next Move</h3>
           <p className="mb-4">
-            Do not learn in isolation. The fastest way to level up is to work with others on multi-disciplinary platforms. Apply your skills today by joining our teams at <strong>KaelithNovaMind AI</strong>!
+            Do not learn in isolation. The fastest way to level up is to work with others on multi-disciplinary platforms. Apply your skills today by joining our teams at <strong>Think 42 AI lab</strong>!
           </p>
         </div>
       )
@@ -380,7 +380,7 @@ export function Blogs() {
       ) : (
         // Standard Blog Roll view
         <div className="py-24 sm:py-32">
-          <SEO title="Blogs & Insights" description="Read insights, tutorials, and career advice written by the members of the NovaMind AI Society." />
+          <SEO title="Blogs & Insights" description="Read insights, tutorials, and career advice written by the members of Think 42 AI lab." />
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:mx-0">
               <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Society Blog</h2>

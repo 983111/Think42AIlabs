@@ -142,9 +142,7 @@ function Footer() {
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">Connect</h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  <li><a href="mailto:kaelithnovamind@gmail.com" className="text-sm leading-6 text-gray-600 hover:text-gray-900">kaelithnovamind@gmail.com</a></li>
-                  <li><a href="https://www.linkedin.com/in/kaelith-novamind-b6171041a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="text-sm leading-6 text-gray-600 hover:text-gray-900">LinkedIn Profile</a></li>
-                  <li><a href="https://www.instagram.com/kaelithnovamind?igsh=MTdjaHZuMmx1ZHdndQ==" target="_blank" rel="noopener noreferrer" className="text-sm leading-6 text-gray-600 hover:text-gray-900">Instagram Profile</a></li>
+                  <li><a href="mailto:hello@think42ai.com" className="text-sm leading-6 text-gray-600 hover:text-gray-900">hello@think42ai.com</a></li>
                 </ul>
                 <div className="mt-8">
                   <h3 className="text-sm font-semibold leading-6 text-gray-900">Subscribe to our newsletter</h3>
@@ -194,7 +192,7 @@ function Footer() {
           </div>
         </div>
         <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24 flex items-center justify-between">
-          <p className="text-xs leading-5 text-gray-500">&copy; {new Date().getFullYear()} NovaMind AI Society. All rights reserved.</p>
+          <p className="text-xs leading-5 text-gray-500">&copy; {new Date().getFullYear()} Think 42 AI lab. All rights reserved.</p>
           <div className="flex space-x-6 text-xs leading-5 text-gray-500">
              <Link to="/privacy" className="hover:text-gray-900">Privacy Policy</Link>
              <Link to="/terms" className="hover:text-gray-900">Terms of Service</Link>

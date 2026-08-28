@@ -154,7 +154,7 @@ export function Leadership() {
 
   return (
     <div className="bg-white min-h-screen">
-      <SEO title="Members" description="Meet the core team driving the vision and operations of the NovaMind AI Society." />
+      <SEO title="Members" description="Meet the core team driving the vision and operations of Think 42 AI lab." />
 
       {/* Hero Section */}
       <div className="relative isolate overflow-hidden bg-gradient-to-b from-gray-50 to-white py-16 sm:py-24 border-b border-gray-100">
@@ -165,13 +165,13 @@ export function Leadership() {
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center rounded-full border border-gray-200 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-widest text-gray-500 shadow-sm">
-              The People Behind NovaMind
+              The People Behind Think 42
             </span>
             <h2 className="mt-5 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
               Society Members
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-600">
-              Meet the collaborative teams of builders, researchers, and innovators driving the vision and operations of the NovaMind AI Society.
+              Meet the collaborative teams of builders, researchers, and innovators driving the vision and operations of Think 42 AI lab.
             </p>
           </div>
 

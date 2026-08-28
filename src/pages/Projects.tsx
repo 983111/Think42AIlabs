@@ -23,7 +23,7 @@ export function Projects() {
       features: ['OAuth authentication', 'Workflow builder & AI generation', 'Trigger-action system', 'Webhooks', 'Task scheduling', 'API integrations & execution logs'],
     },
     {
-      name: 'Kaelith Educational Platform',
+      name: 'Think 42 Educational Platform',
       description: 'An AI workspace that works as a personal counsellor, designed to help students at crucial points like extracurricular activities (ECs), grades, and personalized college recommendations.',
       features: ['AI personal counselor', 'Extracurriculars tracking', 'Grade analysis', 'College recommendations', 'Interactive student workspace'],
     },
@@ -31,7 +31,7 @@ export function Projects() {
 
   return (
     <div className="bg-white py-24 sm:py-32">
-      <SEO title="Projects" description="Explore the flagship engineering and research projects currently being developed by members of the NovaMind AI Society." />
+      <SEO title="Projects" description="Explore the flagship engineering and research projects currently being developed by members of Think 42 AI lab." />
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Flagship Projects</h2>

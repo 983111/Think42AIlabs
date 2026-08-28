@@ -8,7 +8,7 @@ export function Home() {
     <div className="bg-[#FAFAFA]">
       <SEO 
         title="Home" 
-        description="Welcome to NovaMind AI Society. Building AI. Conducting Research. Creating Open Source. Learning Together." 
+        description="Welcome to Think 42 AI lab. Building AI. Conducting Research. Creating Open Source. Learning Together."
       />
       {/* Hero Section */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-16">
@@ -18,7 +18,7 @@ export function Home() {
               Building the future with intelligence.
             </h1>
             <p className="mt-6 text-base text-gray-500 sm:text-lg sm:max-w-xl sm:mx-auto lg:mx-0">
-              NovaMind AI Society is a student-driven community advancing artificial intelligence through research, innovation, and real-world impact.
+              Think 42 AI lab is a student-driven community advancing artificial intelligence through research, innovation, and real-world impact.
             </p>
             <div className="mt-8 sm:flex sm:justify-center lg:justify-start gap-4">
               <a
@@ -172,4 +172,3 @@ export function Home() {
     </div>
   );
 }
-

@@ -3,7 +3,7 @@ import { SEO } from '../components/SEO';
 export function Privacy() {
   return (
     <div className="bg-white px-6 py-32 lg:px-8">
-      <SEO title="Privacy Policy" description="Privacy Policy for NovaMind AI Society. Learn how we collect, store, and protect your data." />
+      <SEO title="Privacy Policy" description="Privacy Policy for Think 42 AI lab. Learn how we collect, store, and protect your data." />
       <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Privacy Policy</h1>
         <p className="mt-6 text-xl leading-8 text-gray-700">
@@ -42,7 +42,7 @@ export function Privacy() {
 
         <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Contact</h2>
         <p className="mt-6">
-          For any privacy-related questions, please contact us at privacy@novamindai.org.
+          For any privacy-related questions, please contact us at privacy@think42ai.com.
         </p>
       </div>
     </div>
