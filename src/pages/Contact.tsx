@@ -18,7 +18,6 @@ export function Contact() {
 
             <p className="text-gray-900 font-medium">Email: <a href="mailto:think42ailabs@gmail.com" className="text-blue-600 hover:underline">think42ailabs@gmail.com</a></p>
 
-            <p className="text-gray-900 font-medium">Email: <a href="mailto:hello@think42ai.com" className="text-blue-600 hover:underline">hello@think42ai.com</a></p>
 
          </div>
       </div>
