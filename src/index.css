@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-paper: #FFFFFF;
+  --color-ink: #17181B;
+  --color-ink-soft: #56585E;
+  --color-ink-faint: #8A8C92;
+  --color-line: #E2E0D9;
+  --color-accent: #9A2F22;
+  --color-accent-soft: #F5EAE7;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+@layer components {
+  /* Buttons: rectangular, no shadow, no gradient */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.75rem;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid var(--color-ink);
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+  }
+  .btn:hover {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+  }
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.75rem;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid var(--color-line);
+    background-color: transparent;
+    color: var(--color-ink);
+    transition: border-color 150ms ease, background-color 150ms ease;
+  }
+  .btn-outline:hover {
+    border-color: var(--color-ink);
+  }
+
+  .hairline {
+    border-color: var(--color-line);
+  }
+
+  .index-mark {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-ink-faint);
+    letter-spacing: 0.02em;
+  }
+
+  .link-accent {
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-decoration-color: var(--color-line);
+    text-underline-offset: 4px;
+    transition: text-decoration-color 150ms ease;
+  }
+  .link-accent:hover {
+    text-decoration-color: var(--color-accent);
+  }
+
+  .prose-page h2 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+}

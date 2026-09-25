@@ -1,0 +1,6 @@
+{
+  "name": "Think 42 AI lab",
+  "description": "The official website for Think 42 AI lab. Contains membership applications, blogs, and resources.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
