@@ -150,7 +150,7 @@ function Footer() {
               </form>
             )}
             <p className="mt-4 text-sm text-ink-soft">
-              <a href="mailto:think42ailabs@gmail.com" className="hover:text-ink">think42ailabs@gmail.com</a>
+              <a href="mailto:team@think42ailabs.me" className="hover:text-ink">team@think42ailabs.me</a>
             </p>
           </div>
         </div>
