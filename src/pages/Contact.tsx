@@ -10,10 +10,10 @@ export function Contact() {
           Have a question? Write to us and we'll get back to you.
         </p>
         <a
-          href="mailto:think42ailabs@gmail.com"
+          href="mailto:team@think42ailabs.me"
           className="mt-10 inline-block font-serif text-xl text-ink border-b border-ink pb-1 hover:text-accent hover:border-accent transition-colors"
         >
-          think42ailabs@gmail.com
+          team@think42ailabs.me
         </a>
       </div>
     </div>
