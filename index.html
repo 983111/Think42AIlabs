@@ -63,7 +63,7 @@ h2{font-size:clamp(34px,4.4vw,46px);font-weight:300;letter-spacing:-1px;line-hei
 .box li:before{content:"";position:absolute;left:0;top:.7em;width:7px;height:1px;background:var(--ink)}
 .box li b{font-weight:500}
 .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px}
-.proj{display:flex;flex-direction:column}
+.proj{display:flex;flex-direction:column}.proj .project-cover{display:block;width:100%;height:220px;object-fit:cover;object-position:top center;border-radius:12px;margin-bottom:20px;background:var(--bg2)}
 .proj .tag{align-self:flex-start;font-size:13px;border:1px solid var(--line);border-radius:99px;padding:4px 12px;margin-bottom:18px;color:var(--mute)}
 .proj .tag.live{color:var(--ink);background:var(--bg2);font-weight:400}
 .team{display:grid;grid-template-columns:repeat(4,1fr);margin-top:36px;border:1px solid var(--line);border-radius:18px;overflow:hidden}
@@ -134,7 +134,7 @@ footer .nav{flex-wrap:wrap;height:auto;padding:24px 0;gap:14px}
 .mem{border:1px solid var(--line);border-radius:18px;padding:14px;background:var(--card)}
 .mem.ld{border-color:var(--ink)}
 .mem .ph{aspect-ratio:1/1;border-radius:12px;background:var(--bg2);border:1px dashed var(--line);display:grid;place-items:center;margin-bottom:14px}
-.mem .ph svg{width:44%;stroke:var(--mute);fill:none;stroke-width:1.3;opacity:.6}
+.mem .ph svg{width:44%;stroke:var(--mute);fill:none;stroke-width:1.3;opacity:.6}.mem .ph img{width:100%;height:100%;display:block;object-fit:cover;border-radius:12px}
 .mem b{display:block;font-weight:400;font-size:15px;line-height:1.3}
 .mem small{color:var(--mute);font-size:13px}
 </style>
@@ -208,9 +208,9 @@ footer .nav{flex-wrap:wrap;height:auto;padding:24px 0;gap:14px}
 <span class="chip">Projects</span><h2>Applied AI, shipped as apps</h2>
 <p class="sub">Work across agriculture, fashion, and scholarship discovery.</p>
 <div class="projects">
-<div class="box proj"><span class="tag live">Final testing · Google Play on 6 Nov 2026</span><h3><a href="#cerys-ai">CeryS AI →</a></h3><p>An agricultural assistant that helps farmers make more informed decisions, combining Google Gemini with the K2-Horizon model.</p><ul><li>Weather forecasts</li><li>AI plant disease diagnosis</li><li>Government scheme discovery</li><li>Conversational crop guidance</li></ul></div>
-<div class="box proj"><span class="tag">Flutter mobile app</span><h3><a href="#styfi">Styfi →</a></h3><p>A fashion marketplace that brings AI into shopping for both buyers and sellers.</p><ul><li>Virtual try-on and outfit composer</li><li>Trend detector</li><li>Seller dashboard and image enhancer</li><li>Order management and checkout</li></ul></div>
-<div class="box proj"><span class="tag">Flutter, cross-platform</span><h3><a href="#scholira">Scholira →</a></h3><p>Matches students with scholarships based on GPA, test scores, field of study, and target countries.</p><ul><li>Personalized recommendations</li><li>Coverage across the USA, UK, Germany, South Korea, Turkey, China, and Japan</li><li>Real-time scholarship API</li><li>iOS, Android, Web, and desktop</li></ul></div>
+<div class="box proj"><img class="project-cover" src="/images/projects/CeryS%20AI/Screenshot_20261031_193020.jpg" alt="CeryS AI application screenshot" loading="lazy"><span class="tag live">Final testing · Google Play on 6 Nov 2026</span><h3><a href="#cerys-ai">CeryS AI →</a></h3><p>An agricultural assistant that helps farmers make more informed decisions, combining Google Gemini with the K2-Horizon model.</p><ul><li>Weather forecasts</li><li>AI plant disease diagnosis</li><li>Government scheme discovery</li><li>Conversational crop guidance</li></ul></div>
+<div class="box proj"><img class="project-cover" src="/images/projects/styfi/screenshot-1.png" alt="Styfi application screenshot" loading="lazy"><span class="tag">Flutter mobile app</span><h3><a href="#styfi">Styfi →</a></h3><p>A fashion marketplace that brings AI into shopping for both buyers and sellers.</p><ul><li>Virtual try-on and outfit composer</li><li>Trend detector</li><li>Seller dashboard and image enhancer</li><li>Order management and checkout</li></ul></div>
+<div class="box proj"><img class="project-cover" src="/images/projects/scholira/screenshot-1.png" alt="Scholira application screenshot" loading="lazy"><span class="tag">Flutter, cross-platform</span><h3><a href="#scholira">Scholira →</a></h3><p>Matches students with scholarships based on GPA, test scores, field of study, and target countries.</p><ul><li>Personalized recommendations</li><li>Coverage across the USA, UK, Germany, South Korea, Turkey, China, and Japan</li><li>Real-time scholarship API</li><li>iOS, Android, Web, and desktop</li></ul></div>
 </div>
 </div></section>
 
@@ -270,6 +270,18 @@ const TEAMS=[
 {n:'Software Engineering Team',s:'2 Team Leaders · 5 Team Members',g:[['Team Leaders',['Ishimwe Bonheur','Syrin Alabrach']],['Team Members',['KALIZA Esther','Vieira Isimbi Ntwali','Kundan Kumar','Jean Pierre Hitayezu','Jackson NSANZIMANA']]]}
 ];
 const root=document.getElementById('teams');
+const TEAM_PHOTOS={
+'Muhammad Safwan Ahmad Saffi':'muhammad-safwan-ahmad-saffi.jpg',
+'Habib Bashir Lawal':'Habib Bashir Lawal.jpg',
+'Om Mahadik':'Om Mahadik.jpg',
+'Eugene Mutuyimana':'Eugene Mutuyimana.jpg',
+'Owojori Oluwajuwonlo Emmanuel':'Owojori Oluwajuwonlo Emmanuel.jpg',
+'Syrin Alabrach':'Syrin Alabrach.jpg',
+'KALIZA Esther':'KALIZA Esther.jpg',
+'Kundan Kumar':'Kundan Kumar.jpg',
+'Jean Pierre Hitayezu':'Jean Pierre Hitayezu.jpg',
+'Jackson NSANZIMANA':'Jackson NSANZIMANA.jpg'
+};
 TEAMS.forEach(t=>{
  const sec=document.createElement('section');sec.className='tm';
  sec.innerHTML='<div class="tm-h"><h3></h3><span></span></div>';
@@ -279,7 +291,8 @@ TEAMS.forEach(t=>{
   const grid=document.createElement('div');grid.className='mgrid';
   names.forEach(nm=>{
    const c=document.createElement('div');c.className='mem'+(/Leader/.test(label)?' ld':'');
-   c.innerHTML='<div class="ph" title="Photo placeholder"><svg viewBox="0 0 40 40"><circle cx="20" cy="15" r="7"/><path d="M6 36c1-8 7-12 14-12s13 4 14 12"/></svg></div><b></b><small></small>';
+   const photo=TEAM_PHOTOS[nm];
+   c.innerHTML=`<div class="ph" title="${photo?'Member photograph':'Photo unavailable'}">${photo?`<img src="/images/team/${encodeURIComponent(photo)}" alt="${nm}" loading="lazy">`:'<svg viewBox="0 0 40 40"><circle cx="20" cy="15" r="7"/><path d="M6 36c1-8 7-12 14-12s13 4 14 12"/></svg>'}</div><b></b><small></small>`;
    c.querySelector('b').textContent=nm;c.querySelector('small').textContent=label.replace(/s$/,'');
    grid.appendChild(c);
   });
