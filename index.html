@@ -77,7 +77,6 @@ h2{font-size:clamp(34px,4.4vw,46px);font-weight:300;letter-spacing:-1px;line-hei
 .banner h2{font-size:34px;margin:0 0 10px}.banner p{font-size:18px;color:var(--mute)}.banner .btn{margin-top:26px;padding:14px 24px;font-size:14px}
 .banner svg{position:absolute;right:30px;top:50%;transform:translateY(-50%);width:300px;opacity:.8;stroke:var(--ink);fill:none;stroke-width:1}
 footer{margin-top:70px;border-top:1px solid var(--line)}
-.contact-email{font-size:13px;color:var(--ink);text-decoration:none;white-space:nowrap}.contact-email:hover{text-decoration:underline}
 footer .nav{height:92px}
 footer ul{gap:32px}footer nav a{padding:0;border:0;font-size:13px}
 .copy{font-size:13px;color:var(--mute);padding-bottom:30px}
@@ -114,6 +113,16 @@ footer .nav{flex-wrap:wrap;height:auto;padding:24px 0;gap:14px}
 .box ul.two{grid-template-columns:1fr 1fr;column-gap:40px}
 .lcta{display:flex;gap:16px;flex-wrap:wrap;margin-top:28px}
 .box h3 a:hover{text-decoration:underline}
+.gal{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 16px;margin-top:22px}
+.gal>*{flex:none;scroll-snap-align:start}
+.gal button{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:8px;cursor:zoom-in}
+.gal img{display:block;height:380px;width:auto;max-width:78vw;object-fit:contain;border-radius:10px}
+.gal .miss{height:380px;aspect-ratio:9/19;max-width:78vw;border:1px dashed var(--line);border-radius:16px;display:grid;place-items:center;color:var(--mute);font-size:13px;text-align:center;padding:12px;background:var(--bg2)}
+#lb{position:fixed;inset:0;z-index:50;background:#000d;display:grid;place-items:center}
+#lb img{max-width:90vw;max-height:86vh;width:auto;height:auto;object-fit:contain;border-radius:8px}
+#lb button{position:absolute;background:#fff;color:#111;border:0;border-radius:50%;width:44px;height:44px;font-size:24px;cursor:pointer}
+.lbx{top:18px;right:18px}.lbp{left:18px;top:50%}.lbf{right:18px;top:50%}
+@media(max-width:600px){.gal img,.gal .miss{height:320px}}
 @media(max-width:960px){.areas,.lgrid,.box ul.two{grid-template-columns:1fr}.vis{grid-template-columns:1fr}.vis h3{grid-row:auto}.vis p{grid-column:auto}}
 .mhead{padding:64px 0 10px}
 .back{font-size:14px;color:var(--mute)}.back:hover{color:var(--ink)}
@@ -126,7 +135,6 @@ footer .nav{flex-wrap:wrap;height:auto;padding:24px 0;gap:14px}
 .mem.ld{border-color:var(--ink)}
 .mem .ph{aspect-ratio:1/1;border-radius:12px;background:var(--bg2);border:1px dashed var(--line);display:grid;place-items:center;margin-bottom:14px}
 .mem .ph svg{width:44%;stroke:var(--mute);fill:none;stroke-width:1.3;opacity:.6}
-.mem .member-photo{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center;border-radius:12px;margin-bottom:14px;background:var(--bg2)}
 .mem b{display:block;font-weight:400;font-size:15px;line-height:1.3}
 .mem small{color:var(--mute);font-size:13px}
 </style>
@@ -200,9 +208,9 @@ footer .nav{flex-wrap:wrap;height:auto;padding:24px 0;gap:14px}
 <span class="chip">Projects</span><h2>Applied AI, shipped as apps</h2>
 <p class="sub">Work across agriculture, fashion, and scholarship discovery.</p>
 <div class="projects">
-<div class="box proj"><span class="tag live">Final testing · Google Play on 6 Nov 2026</span><h3>CeryS AI</h3><p>An agricultural assistant that helps farmers make more informed decisions, combining Google Gemini with the K2-Horizon model.</p><ul><li>Weather forecasts</li><li>AI plant disease diagnosis</li><li>Government scheme discovery</li><li>Conversational crop guidance</li></ul></div>
-<div class="box proj"><span class="tag">Flutter mobile app</span><h3>Styfi</h3><p>A fashion marketplace that brings AI into shopping for both buyers and sellers.</p><ul><li>Virtual try-on and outfit composer</li><li>Trend detector</li><li>Seller dashboard and image enhancer</li><li>Order management and checkout</li></ul></div>
-<div class="box proj"><span class="tag">Flutter, cross-platform</span><h3>Scholira</h3><p>Matches students with scholarships based on GPA, test scores, field of study, and target countries.</p><ul><li>Personalized recommendations</li><li>Coverage across the USA, UK, Germany, South Korea, Turkey, China, and Japan</li><li>Real-time scholarship API</li><li>iOS, Android, Web, and desktop</li></ul></div>
+<div class="box proj"><span class="tag live">Final testing · Google Play on 6 Nov 2026</span><h3><a href="#cerys-ai">CeryS AI →</a></h3><p>An agricultural assistant that helps farmers make more informed decisions, combining Google Gemini with the K2-Horizon model.</p><ul><li>Weather forecasts</li><li>AI plant disease diagnosis</li><li>Government scheme discovery</li><li>Conversational crop guidance</li></ul></div>
+<div class="box proj"><span class="tag">Flutter mobile app</span><h3><a href="#styfi">Styfi →</a></h3><p>A fashion marketplace that brings AI into shopping for both buyers and sellers.</p><ul><li>Virtual try-on and outfit composer</li><li>Trend detector</li><li>Seller dashboard and image enhancer</li><li>Order management and checkout</li></ul></div>
+<div class="box proj"><span class="tag">Flutter, cross-platform</span><h3><a href="#scholira">Scholira →</a></h3><p>Matches students with scholarships based on GPA, test scores, field of study, and target countries.</p><ul><li>Personalized recommendations</li><li>Coverage across the USA, UK, Germany, South Korea, Turkey, China, and Japan</li><li>Real-time scholarship API</li><li>iOS, Android, Web, and desktop</li></ul></div>
 </div>
 </div></section>
 
@@ -241,6 +249,8 @@ footer .nav{flex-wrap:wrap;height:auto;padding:24px 0;gap:14px}
 </main>
 
 <main id="lab-view" hidden></main>
+<main id="proj-view" hidden></main>
+<div id="lb" hidden role="dialog" aria-label="Screenshot preview"><button class="lbx" aria-label="Close">×</button><button class="lbp" aria-label="Previous">‹</button><img alt=""><button class="lbf" aria-label="Next">›</button></div>
 <main id="members-view" hidden><div class="wrap">
 <div class="mhead"><a class="back" href="#home">← Back to home</a><div style="margin-top:28px"><span class="chip">Members</span></div><h2>Meet the 17 members</h2><p class="sub">Three teams across research, machine learning, and software engineering.</p></div>
 <div id="teams"></div>
@@ -249,24 +259,11 @@ footer .nav{flex-wrap:wrap;height:auto;padding:24px 0;gap:14px}
 <div class="nav">
 <a class="logo" href="#home"><b>42</b><i></i>Think 42 AI Labs</a>
 <nav style="display:block"><ul><li><a href="#home">Home</a></li><li><a href="#labs">Labs</a></li><li><a href="#projects">Projects</a></li><li><a href="#team">Resources</a></li><li><a href="#about">About</a></li><li><a href="#members">Members</a></li></ul></nav>
-<a class="contact-email" href="mailto:team@think42ailabs.me">team@think42ailabs.me</a>
+<a href="https://github.com/983111/Think42AIlabs" aria-label="GitHub" style="display:flex"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.300.8-1.600-2.600-.3-5.300-1.300-5.300-5.700 0-1.300.5-2.300 1.200-3.100-.1-.3-.5-1.500.1-3.100 0 0 1-.3 3.200 1.200a11 11 0 0 1 5.800 0c2.200-1.500 3.200-1.200 3.200-1.200.6 1.600.2 2.800.1 3.100.8.8 1.200 1.800 1.200 3.100 0 4.400-2.700 5.400-5.300 5.700.4.4.8 1.100.8 2.200v3.300c0 .3.2.7.8.6A11.500 11.500 0 0 0 12 .5z"/></svg></a>
 </div>
 <p class="copy">© 2026 Think 42 AI Labs · think42ailabs.me</p>
 </div></footer>
 <script>
-const TEAM_PHOTOS={
-'Muhammad Safwan Ahmad Saffi':'muhammad-safwan-ahmad-saffi.jpg',
-'Habib Bashir Lawal':'Habib Bashir Lawal.jpg',
-'Om Mahadik':'Om Mahadik.jpg',
-'Eugene Mutuyimana':'Eugene Mutuyimana.jpg',
-'Owojori Oluwajuwonlo Emmanuel':'Owojori Oluwajuwonlo Emmanuel.jpg',
-'Syrin Alabrach':'Syrin Alabrach.jpg',
-'KALIZA Esther':'KALIZA Esther.jpg',
-'Kundan Kumar':'Kundan Kumar.jpg',
-'Jean Pierre Hitayezu':'Jean Pierre Hitayezu.jpg',
-'Jackson NSANZIMANA':'Jackson NSANZIMANA.jpg'
-};
-const teamPhotoUrl=name=>'https://raw.githubusercontent.com/983111/Think42AIlabs/main/public/images/team/'+encodeURIComponent(TEAM_PHOTOS[name]);
 const TEAMS=[
 {n:'AI Research Team',s:'1 Team Leader · 8 Research Members',g:[['Team Leader',['Schalom GANDONOU']],['Research Members',['Muhammad Safwan Ahmad Saffi','Habib Bashir Lawal','Anirudh Nallajarla','Lamar Ahmed Al-Labban','Thisum Samarasinghe','Om Mahadik','Eugene Mutuyimana','Owojori Oluwajuwonlo Emmanuel']]]},
 {n:'Machine Learning Team',s:'1 Team Member',g:[['Team Member',['Sagid Abdulla MohammedAli']]]},
@@ -283,13 +280,6 @@ TEAMS.forEach(t=>{
   names.forEach(nm=>{
    const c=document.createElement('div');c.className='mem'+(/Leader/.test(label)?' ld':'');
    c.innerHTML='<div class="ph" title="Photo placeholder"><svg viewBox="0 0 40 40"><circle cx="20" cy="15" r="7"/><path d="M6 36c1-8 7-12 14-12s13 4 14 12"/></svg></div><b></b><small></small>';
-   if(TEAM_PHOTOS[nm]){
-    const img=document.createElement('img');
-    img.className='member-photo';img.src=teamPhotoUrl(nm);img.alt=nm;
-    img.loading='lazy';img.decoding='async';
-    img.onerror=()=>{const fallback=document.createElement('div');fallback.className='ph';fallback.title='Photo unavailable';img.replaceWith(fallback);};
-    c.querySelector('.ph').replaceWith(img);
-   }
    c.querySelector('b').textContent=nm;c.querySelector('small').textContent=label.replace(/s$/,'');
    grid.appendChild(c);
   });
@@ -312,6 +302,42 @@ focusT:`Learning and Competition Focus`,focusI:`IOAI Lab aims to cover important
 focus:[`Python programming for artificial intelligence.`,`Mathematics and computational foundations.`,`Data analysis and preprocessing.`,`Classical machine learning algorithms.`,`Neural networks and deep learning.`,`Computer vision.`,`Natural language processing.`,`Model training and evaluation.`,`Algorithmic thinking and practical problem-solving.`],
 vision:[`Our vision is to make IOAI Lab a useful learning destination for students interested in artificial intelligence competitions and advanced AI education.`,`We want to help students move beyond simply using AI tools and develop the ability to understand, implement, evaluate, and build AI systems themselves.`,`Through structured learning material, practical notebooks, coding exercises, and accessible educational resources, IOAI Lab aims to support a stronger foundation for the next generation of AI researchers and engineers.`]}
 };
+const pv=document.getElementById('proj-view');
+const PROJ={
+'styfi':{name:'Styfi',domain:'Fashion and E-commerce',tag:`AI-Powered Fashion Marketplace`,dir:'/images/projects/styfi/',shots:['screenshot-1.png','screenshot-2.png'],
+facts:[['Domain','Fashion and E-commerce'],['Platform','Flutter'],['Users','Buyers and sellers'],['Screenshots','2']],
+intro:[`Styfi is an AI-powered fashion marketplace designed to transform how people discover, visualize, and purchase fashion products. It combines e-commerce functionality with artificial intelligence to create a more personalized and interactive shopping experience.`,`Traditional online shopping can make it difficult for customers to visualize how clothing may look on them or determine which products complement one another. Styfi addresses these challenges through AI-powered virtual try-ons, outfit recommendations, and fashion trend analysis.`,`The platform serves two primary user groups: buyers and sellers. Buyers can explore fashion collections, discover emerging trends, visualize products using virtual try-on technology, and receive recommendations for matching outfits. Sellers can manage their stores, improve product presentation, and monitor incoming orders.`],
+feat:[[`AI Virtual Try-On`,`Users upload a personal photograph and select a clothing product to generate an AI-powered visualization of how it may look on them.`],[`AI Outfit Composer`,`Recommends matching fashion products based on selected items, including colour coordination, complementary styles, and product prices.`],[`Fashion Trend Detector`,`Analyzes fashion categories and identifies emerging trends, popularity scores, and relevant fashion keywords.`],[`Fashion Marketplace`,`Lets buyers explore product collections, view detailed listings, and discover new arrivals.`],[`Integrated Checkout`,`Supports an in-app purchasing experience.`],[`Seller Dashboard`,`Allows sellers to manage product listings and monitor incoming orders.`],[`AI Image Enhancer`,`Helps sellers improve product photographs through image-quality, lighting, and presentation enhancements.`],[`Order Management`,`Provides tools for tracking orders and monitoring sales activity.`]],
+tech:`Styfi is developed using Flutter, with AI-powered capabilities integrated into the application to support image generation, product recommendations, and fashion trend analysis. Its architecture brings marketplace functionality and intelligent styling tools together in one application.`,
+vision:`Styfi aims to make online fashion shopping more interactive and personalized by bringing artificial intelligence into everyday fashion discovery. Users can do more than browse products: they can visualize, combine, and explore fashion with intelligent assistance.`},
+'scholira':{name:'Scholira',domain:'Education and Scholarships',tag:`AI-Powered Global Scholarship Discovery`,dir:'/images/projects/scholira/',shots:['screenshot-1.png','screenshot-2.png','screenshot-3.png'],
+facts:[['Domain','Education and Scholarships'],['Platform','Flutter, cross-platform'],['Countries covered','7'],['Screenshots','3']],
+intro:[`Scholira is an AI-powered scholarship discovery platform designed to help students find educational funding opportunities that match their academic backgrounds, qualifications, and future ambitions.`,`Scholarship opportunities are distributed across different countries, universities, and databases, each with its own eligibility requirements. Students can struggle to identify which opportunities are relevant to their academic profiles.`,`Scholira addresses this problem through an intelligent scholarship-matching system. It evaluates a student's academic information and preferences to recommend relevant opportunities from a curated scholarship database.`,`The application uses information such as GPA, standardized test scores, intended field of study, and preferred destination countries to generate personalized scholarship recommendations. This helps students focus on opportunities that align with their goals.`],
+feat:[[`AI-Powered Scholarship Matching`,`Analyzes academic profiles and recommends scholarships based on GPA, examination scores, intended subjects, and other relevant qualifications.`],[`Global Scholarship Discovery`,`Helps students explore scholarship opportunities across the United States, United Kingdom, Germany, South Korea, Turkey, China, and Japan.`],[`Personalized Student Profiles`,`Provides a structured onboarding process where students enter their academic backgrounds, interests, and study preferences.`],[`Scholarship Database`,`Organizes scholarship opportunities into an accessible discovery experience with relevant funding information.`],[`Real-Time Data Integration`,`Integrates with a scholarship API to support access to updated scholarship opportunity information.`],[`Cross-Platform Accessibility`,`Built with Flutter to support Android, iOS, Web, Windows, macOS, and Linux.`]],
+tech:`Scholira is developed using Flutter, providing a unified cross-platform application architecture. Its recommendation system uses AI-driven profile matching to connect student qualifications with relevant scholarship opportunities. API integration supports the retrieval of scholarship information.`,
+vision:`Scholira aims to make global educational opportunities easier to discover. Its long-term objective is to reduce the information gap between students and international scholarship opportunities by making personalized scholarship discovery more accessible, organized, and efficient.`},
+'cerys-ai':{name:'CeryS AI',domain:'Agriculture',tag:`AI-Powered Agricultural Assistant`,dir:'/images/projects/CeryS%20AI/',shots:['Screenshot_20261031_193020.jpg','Screenshot_20261031_193026.jpg','Screenshot_20261031_193035.jpg','Screenshot_20261031_193041.jpg'],
+facts:[['Domain','Agriculture'],['AI systems','Google Gemini and K2-Horizon'],['Status','Final testing'],['Google Play target','6 November 2026'],['Screenshots','4']],
+intro:[`CeryS AI is an AI-powered agricultural assistant developed to make agricultural information and intelligent farming support more accessible to farmers. The application focuses on helping farmers understand crop-related challenges, access useful agricultural information, and make more informed decisions through artificial intelligence.`,`Agriculture involves continuous decisions about crop health, weather conditions, farming practices, and available government support. Accessing reliable and understandable information can be difficult, particularly when farmers need assistance in the field.`,`CeryS AI brings several agricultural assistance capabilities together in one mobile application. It combines Google Gemini and the K2-Horizon model to provide conversational AI assistance alongside specialized agricultural features.`,`The application is designed around practical farming needs, allowing users to access weather information, investigate potential plant diseases, explore government schemes, and ask agriculture-related questions through an AI assistant.`],
+feat:[[`AI Plant Disease Diagnosis`,`Allows farmers to use images of affected plants to identify potential diseases through AI-assisted visual analysis.`],[`Weather Forecasts`,`Provides weather information to help farmers understand upcoming conditions and plan agricultural activities.`],[`AI Agricultural Assistant`,`Offers conversational assistance for crop-related questions and general agricultural guidance, powered by the K2-Horizon model.`],[`Government Schemes Discovery`,`Helps farmers discover information about relevant government schemes and available agricultural support.`],[`Crop-Related Guidance`,`Provides access to practical information relevant to crop management and farming requirements.`],[`Integrated AI Assistance`,`Combines multiple AI capabilities into a single agricultural application.`]],
+tech:`CeryS AI integrates Google Gemini with the K2-Horizon model developed within Think 42 AI Labs' AI experimentation ecosystem. The application brings together AI-assisted image analysis, conversational AI, and agricultural information services through a mobile-first interface.`,
+status:`As of 31 October 2026, CeryS AI is in its final testing period, with a planned Google Play Store publication date of 6 November 2026. This date is a target and is subject to final testing and store review.`,
+vision:`CeryS AI aims to make useful agricultural technology accessible to farming communities by bringing AI-powered assistance closer to farmers. Its broader goal is to bridge the gap between emerging artificial intelligence technologies and practical agricultural applications, particularly in communities where access to timely agricultural information can make a meaningful difference.`}
+};
+const lb=document.getElementById('lb'),lbi=lb.querySelector('img'),LB={s:[],i:0};
+function lbShow(){lbi.src=LB.s[LB.i];lb.hidden=false}
+lb.addEventListener('click',e=>{if(e.target===lb||e.target.className==='lbx')lb.hidden=true});
+lb.querySelector('.lbp').onclick=e=>{e.stopPropagation();LB.i=(LB.i+LB.s.length-1)%LB.s.length;lbShow()};
+lb.querySelector('.lbf').onclick=e=>{e.stopPropagation();LB.i=(LB.i+1)%LB.s.length;lbShow()};
+addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')lb.hidden=true;if(e.key==='ArrowLeft')lb.querySelector('.lbp').click();if(e.key==='ArrowRight')lb.querySelector('.lbf').click()});
+function renderProj(P){
+ pv.innerHTML=`<div class='wrap'><div class='lh'><a class='back' href='#projects'>← Back to projects</a><div class='lgrid'><div><div style='margin-top:28px'><span class='chip'>${P.domain}</span></div><h2>${P.name}</h2><p class='sub'>${P.tag}</p><div class='prose'>${P.intro.map(p=>`<p>${p}</p>`).join('')}</div></div><aside class='lpanel'><dl>${P.facts.map(f=>`<div><dt>${f[0]}</dt><dd>${f[1]}</dd></div>`).join('')}</dl></aside></div></div><div class='lsec'><h3 class='t'>Screenshots</h3><div class='gal'>${P.shots.map((s,i)=>`<button type='button'><img src='${P.dir}${s}' alt='${P.name} screenshot ${i+1}' loading='lazy'></button>`).join('')}</div></div><div class='lsec'><h3 class='t'>Key features</h3><div class='areas'>${P.feat.map(c=>`<div class='box'><h3>${c[0]}</h3><p>${c[1]}</p></div>`).join('')}</div></div><div class='lsec'><h3 class='t'>Technology and development</h3><div class='box' style='margin-top:20px'><p>${P.tech}</p></div></div>${P.status?`<div class='lsec'><h3 class='t'>Development status</h3><div class='box' style='margin-top:20px'><p>${P.status}</p></div></div>`:''}<div class='vis'><h3 class='t'>Vision</h3><p>${P.vision}</p></div></div>`;
+ const btns=[...pv.querySelectorAll('.gal button')];
+ btns.forEach((b,i)=>{const im=b.querySelector('img');
+  im.addEventListener('error',()=>{b.outerHTML=`<div class='miss'>${P.shots[i]}</div>`});
+  b.addEventListener('click',()=>{const ok=[...pv.querySelectorAll('.gal img')];LB.s=ok.map(x=>x.src);LB.i=Math.max(0,LB.s.indexOf(im.src));lbShow()});
+ });
+}
 function panel(L){
  return `<aside class='lpanel'><svg viewBox='0 0 400 170' fill='none' stroke='currentColor' stroke-width='1' aria-hidden='true' style='color:var(--mute)'><path d='M40 120L120 50L200 100L280 40L360 110M120 50L200 140L280 40M40 120L200 140L360 110M200 100L360 110' opacity='.5'/><circle cx='40' cy='120' r='6' fill='currentColor'/><circle cx='120' cy='50' r='8' fill='currentColor'/><circle cx='200' cy='100' r='10' fill='currentColor'/><circle cx='280' cy='40' r='7' fill='currentColor'/><circle cx='360' cy='110' r='6' fill='currentColor'/><circle cx='200' cy='140' r='5' fill='currentColor'/></svg><dl><div><dt>Part of</dt><dd>Think 42 AI Labs</dd></div><div><dt>Built for</dt><dd>${L.aud}</dd></div><div><dt>Focus</dt><dd>${L.foc}</dd></div><div><dt>Core areas</dt><dd>${L.core.length}</dd></div></dl></aside>`;
 }
@@ -320,9 +346,9 @@ function renderLab(L){
 }
 function route(){
  const h=location.hash.slice(1),m=h==='members';
- const L=LABS[h];home.hidden=m||!!L;mv.hidden=!m;lv.hidden=!L;if(L)renderLab(L);
- document.querySelectorAll('header nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')===(m?'#members':L?'#labs':'#home')));
- if(m||L)scrollTo(0,0);else if(h&&document.getElementById(h))document.getElementById(h).scrollIntoView();
+ const L=LABS[h],P=PROJ[h];home.hidden=m||!!L||!!P;mv.hidden=!m;lv.hidden=!L;pv.hidden=!P;if(L)renderLab(L);if(P)renderProj(P);
+ document.querySelectorAll('header nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')===(m?'#members':L?'#labs':P?'#projects':'#home')));
+ if(m||L||P)scrollTo(0,0);else if(h&&document.getElementById(h))document.getElementById(h).scrollIntoView();
 }
 addEventListener('hashchange',route);route();
 </script>
