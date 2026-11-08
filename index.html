@@ -306,6 +306,43 @@ footer .nav>a[aria-label="GitHub"] svg{width:23px;height:23px}
  .copy{gap:5px 10px;font-size:9px;line-height:1.7;padding-top:12px}
 }
 
+
+/* Definitive removal of the vision card — intentionally no container treatment */
+#home .vision-editorial{
+ display:grid!important;
+ grid-template-columns:minmax(150px,.55fr) minmax(0,1.45fr)!important;
+ column-gap:clamp(28px,7vw,100px)!important;
+ row-gap:0!important;
+ margin:0!important;
+ padding:30px 0 34px!important;
+ border:0!important;
+ border-top:1px solid #cfd6d5!important;
+ border-bottom:1px solid #cfd6d5!important;
+ border-radius:0!important;
+ background:transparent!important;
+ box-shadow:none!important;
+ color:#536a79!important;
+ font:400 15px/1.85 Inter,Arial,sans-serif!important;
+}
+#home .vision-editorial h3{
+ grid-column:1!important;grid-row:1/span 2!important;align-self:start!important;
+ margin:0!important;padding:2px 0 0!important;border:0!important;
+ color:#07385b!important;font:500 clamp(27px,3vw,36px)/1.15 Georgia,serif!important;
+ letter-spacing:-.035em!important;background:transparent!important;
+}
+#home .vision-editorial p{
+ grid-column:2!important;max-width:690px!important;margin:0 0 13px!important;
+ padding:0!important;border:0!important;border-radius:0!important;
+ background:transparent!important;box-shadow:none!important;
+ color:#536a79!important;font:400 15px/1.9 Inter,Arial,sans-serif!important;
+}
+#home .vision-editorial p:last-child{margin-bottom:0!important}
+@media(max-width:600px){
+ #home .vision-editorial{grid-template-columns:1fr!important;gap:14px!important;padding:21px 0 24px!important}
+ #home .vision-editorial h3{grid-column:1!important;grid-row:auto!important;margin:0 0 3px!important;font-size:29px!important}
+ #home .vision-editorial p{grid-column:1!important;margin:0 0 12px!important;font-size:14px!important;line-height:1.85!important}
+}
+
 </style>
 </head>
 <body>
@@ -433,7 +470,7 @@ footer .nav>a[aria-label="GitHub"] svg{width:23px;height:23px}
 <a class="btn dark" href="https://docs.google.com/forms/d/e/1FAIpQLSc20sMqe1_0s0vcYX6DzaokctBi1ZHL1GJ2n63FozV5QtQI7A/viewform?usp=dialog">Get Involved &nbsp;→</a>
 <svg viewBox="0 0 300 200" aria-hidden="true"><path d="M150 20c-40-12-80 10-78 50-22 14-22 48 2 62 4 30 36 42 60 28 24 14 56 2 60-28 24-14 24-48 2-62 2-40-38-62-78-50-2 0-6 0-8 0zM150 20v150M110 70h40M150 100h40M110 130h40M190 60l-10 10M110 100l-10 10"/><circle cx="110" cy="70" r="4"/><circle cx="190" cy="100" r="4"/><circle cx="110" cy="130" r="4"/></svg>
 </div></div></section>
-<section><div class="wrap"><div class="vis" style="margin:0"><h3 class="t">Our vision</h3><p>K2 Horizon Lab represents the lab's commitment to advancing practical AI experimentation and research, while IOAI Lab represents its commitment to making advanced AI education accessible to younger learners.</p><p>Together, they establish two complementary directions: building AI systems and developing the people who will build them.</p></div></div></section>
+<section><div class="wrap"><div class="vision-editorial"><h3 class="t">Our vision</h3><p>K2 Horizon Lab represents the lab's commitment to advancing practical AI experimentation and research, while IOAI Lab represents its commitment to making advanced AI education accessible to younger learners.</p><p>Together, they establish two complementary directions: building AI systems and developing the people who will build them.</p></div></div></section>
 </main>
 
 <main id="lab-view" hidden></main>
