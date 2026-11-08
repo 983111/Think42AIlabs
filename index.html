@@ -270,6 +270,42 @@ footer .nav{height:82px}
 }
 
 .image-note a{color:#547187;text-decoration:underline;text-underline-offset:2px}.image-note a:hover{color:#07385b}
+
+/* Final polish: vision as editorial copy, footer as a deliberate mobile layout */
+section:has(>.wrap>.vis){padding:58px 0 72px}
+.vis{display:grid;grid-template-columns:minmax(150px,.55fr) minmax(0,1.45fr);column-gap:clamp(28px,7vw,100px);row-gap:0;margin:0!important;padding:30px 0 34px;border:0;border-top:1px solid #cfd6d5;border-bottom:1px solid #cfd6d5;border-radius:0;background:transparent;color:#536a79;font:400 15px/1.85 Inter,Arial,sans-serif}
+.vis h3{grid-column:1;grid-row:1/span 2;align-self:start;margin:0;padding-top:2px;color:#07385b;font:500 clamp(27px,3vw,36px)/1.15 Georgia,serif;letter-spacing:-.035em}
+.vis p{grid-column:2;max-width:690px;margin:0 0 13px;color:#536a79;font:400 15px/1.9 Inter,Arial,sans-serif}
+.vis p:last-child{margin-bottom:0}
+footer{margin-top:45px;padding:0 0 20px;border-top:1px solid #d9dedf;background:#f6f4ee}
+footer .wrap{padding-top:22px}
+footer .nav{height:auto;min-height:68px;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:18px 25px;padding:0 0 19px}
+footer .logo{grid-column:1;grid-row:1;gap:13px;color:#07385b;font:500 15px Inter,Arial,sans-serif}
+footer .logo b{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#07385b;color:#fff;font:500 12px Inter,Arial,sans-serif;letter-spacing:0}
+footer .logo i{height:25px;background:#c9c4b8}
+footer nav{grid-column:1/-1;grid-row:2;display:block!important;width:100%;min-width:0}
+footer nav ul{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:0 27px;margin:0;padding:16px 0 0;border-top:1px solid #e0e2de;list-style:none}
+footer nav li{margin:0;padding:0}
+footer nav a{display:inline-block;padding:5px 0!important;border:0!important;color:#496274;font:400 11px/1.5 Inter,Arial,sans-serif;white-space:nowrap}
+footer nav a:hover{color:#08709a}
+footer .nav>a[aria-label="GitHub"]{grid-column:2;grid-row:1;justify-self:end;display:flex;align-items:center;justify-content:center;width:38px;height:38px;color:#07385b}
+footer .nav>a[aria-label="GitHub"] svg{width:23px;height:23px}
+.copy{display:flex;flex-wrap:wrap;align-items:center;gap:5px 14px;margin:0;padding:14px 0 8px;border-top:1px solid #e0e2de;color:#7b878c;font:400 10px/1.7 Inter,Arial,sans-serif}
+.copy a{color:#536d7d;text-decoration:underline;text-decoration-color:#c3c9c8;text-underline-offset:3px}
+@media(max-width:600px){
+ section:has(>.wrap>.vis){padding:40px 0 48px}
+ .vis{grid-template-columns:1fr;gap:14px;padding:21px 0 24px}
+ .vis h3{grid-column:1;grid-row:auto;margin:0 0 3px;font-size:29px}
+ .vis p{grid-column:1;margin:0 0 12px;font-size:14px;line-height:1.85}
+ footer{margin-top:28px;padding-bottom:14px}
+ footer .wrap{padding-left:22px;padding-right:22px;padding-top:16px}
+ footer .nav{grid-template-columns:minmax(0,1fr) auto;gap:15px 10px;padding-bottom:15px}
+ footer .logo{font-size:14px}
+ footer nav ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px 12px;padding-top:14px}
+ footer nav a{font-size:11px;white-space:normal}
+ .copy{gap:5px 10px;font-size:9px;line-height:1.7;padding-top:12px}
+}
+
 </style>
 </head>
 <body>
