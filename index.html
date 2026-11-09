@@ -425,6 +425,113 @@ nav a:hover,nav a.on,footer nav a:hover{color:#8b744b!important}
  .banner svg{display:none!important}
 }
 
+
+
+/* Inspiration section — quiet editorial treatment with photography and open typography */
+.ecosystem{
+ background:transparent!important;
+ padding:clamp(48px,6vw,82px) 0!important;
+}
+.ecosystem-head{
+ display:grid!important;
+ grid-template-columns:minmax(150px,.55fr) minmax(0,1.45fr)!important;
+ align-items:start!important;
+ gap:28px!important;
+ margin:0 0 28px!important;
+ padding:0 0 20px!important;
+ border-bottom:1px solid #d9dedb!important;
+}
+.ecosystem-head .eyebrow{
+ color:#8b744b!important;
+ font:600 10px/1.5 Inter,Arial,sans-serif!important;
+ letter-spacing:.17em!important;
+}
+.ecosystem-head p{
+ max-width:650px!important;
+ margin:0!important;
+ color:#596a74!important;
+ font:400 16px/1.75 Inter,Arial,sans-serif!important;
+}
+.inspiration-grid{
+ display:grid!important;
+ grid-template-columns:1fr 1fr!important;
+ gap:30px!important;
+}
+.inspiration{
+ position:relative!important;
+ display:flex!important;
+ flex-direction:column!important;
+ min-height:0!important;
+ overflow:visible!important;
+ background:transparent!important;
+ color:#263746!important;
+ text-decoration:none!important;
+}
+.inspiration img{
+ position:relative!important;
+ inset:auto!important;
+ display:block!important;
+ width:100%!important;
+ height:auto!important;
+ aspect-ratio:16/9!important;
+ object-fit:cover!important;
+ filter:saturate(.78)!important;
+ transition:filter .35s ease,transform .5s ease!important;
+}
+.inspiration:hover img{transform:translateY(-3px)!important;filter:saturate(.98)!important}
+.inspiration .image-shade{display:none!important}
+.inspiration .image-top{
+ position:static!important;
+ order:2!important;
+ display:block!important;
+ margin:18px 0 0!important;
+ color:#8b744b!important;
+ font:600 9px/1.5 Inter,Arial,sans-serif!important;
+ letter-spacing:.17em!important;
+}
+.image-copy{
+ position:static!important;
+ order:3!important;
+ display:flex!important;
+ align-items:flex-start!important;
+ margin-top:8px!important;
+}
+.image-copy small{display:none!important}
+.image-copy strong{
+ max-width:620px!important;
+ color:#183d54!important;
+ font:500 clamp(25px,2.8vw,35px)/1.16 Georgia,serif!important;
+ letter-spacing:-.035em!important;
+}
+.image-copy i{
+ margin-top:13px!important;
+ padding:0 0 3px!important;
+ border:0!important;
+ border-bottom:1px solid #b9b3a5!important;
+ color:#425b6b!important;
+ font:500 11px/1.5 Inter,Arial,sans-serif!important;
+ font-style:normal!important;
+ transition:color .2s ease,border-color .2s ease!important;
+}
+.inspiration:hover .image-copy i{color:#8b744b!important;border-color:#8b744b!important}
+.image-note{
+ max-width:900px!important;
+ margin:26px 0 0 auto!important;
+ color:#71808a!important;
+ font:400 10px/1.8 Inter,Arial,sans-serif!important;
+ text-align:right!important;
+}
+.image-note a{color:#425b6b!important;text-decoration-color:#b9b3a5!important}
+@media(max-width:700px){
+ .ecosystem{padding:42px 0!important}
+ .ecosystem-head{grid-template-columns:1fr!important;gap:9px!important;margin-bottom:22px!important}
+ .ecosystem-head p{font-size:14px!important}
+ .inspiration-grid{grid-template-columns:1fr!important;gap:32px!important}
+ .inspiration img{aspect-ratio:16/9!important}
+ .image-copy strong{font-size:27px!important}
+ .image-note{margin:22px 0 0!important;text-align:left!important}
+}
+
 </style>
 </head>
 <body>
