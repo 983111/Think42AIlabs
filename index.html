@@ -343,6 +343,30 @@ footer .nav>a[aria-label="GitHub"] svg{width:23px;height:23px}
  #home .vision-editorial p{grid-column:1!important;margin:0 0 12px!important;font-size:14px!important;line-height:1.85!important}
 }
 
+
+
+/* Readability override: keep the site light regardless of the visitor's OS theme. */
+:root{
+ color-scheme:light!important;
+ --bg:#f7f6f1!important;
+ --bg2:#eeece4!important;
+ --ink:#263746!important;
+ --mute:#596a74!important;
+ --line:#d9dedb!important;
+ --btn:#183d54!important;
+ --btn-ink:#fff!important;
+ --card:transparent!important;
+}
+html,body{background:#f7f6f1!important;color:#263746!important}
+body{color-scheme:light!important}
+header,footer,.ecosystem{background-color:#f7f6f1!important}
+h2,.proj h3,.box h3,.vis h3,.lsec h3.t,.tm-h h3{color:#183d54!important}
+.sub,.prose,.box p,.box ul,.proj p,.proj ul,.vis p,.pillar p,.ecosystem-head p{color:#596a74!important}
+.proj ul{color:#4d606c!important}
+.proj .tag{color:#8b744b!important}
+a{color:inherit}
+nav a:hover,nav a.on,footer nav a:hover{color:#8b744b!important}
+
 </style>
 </head>
 <body>
