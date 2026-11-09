@@ -13,7 +13,7 @@
   "routes": [
     {
       "src": "/founder/?$",
-      "dest": "/founder.html"
+      "dest": "/public/founder.html"
     },
     {
       "src": "/images/(.*)",
