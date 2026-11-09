@@ -12,6 +12,10 @@
   ],
   "routes": [
     {
+      "src": "/founder/?$",
+      "dest": "/founder.html"
+    },
+    {
       "src": "/images/(.*)",
       "dest": "/public/images/$1"
     },
