@@ -534,47 +534,45 @@ nav a:hover,nav a.on,footer nav a:hover{color:#8b744b!important}
 }
 
 
-/* Our Labs — editorial image-led presentation */
-#labs .labs-editorial{
- display:grid;
- grid-template-columns:.82fr 1.18fr 1.18fr;
- gap:clamp(22px,2.4vw,34px);
- align-items:start;
-}
-#labs .labs-intro{padding-top:4px}
-#labs .lab-feature{display:block;min-width:0;color:inherit}
-#labs .lab-visual{
- position:relative;
- overflow:hidden;
- aspect-ratio:1.52/1;
- background:#e9e7df;
-}
-#labs .lab-visual img{
- display:block;width:100%;height:100%;object-fit:cover;object-position:top center;
- transition:transform .55s cubic-bezier(.2,.65,.3,1);
-}
-#labs .lab-feature:hover .lab-visual img{transform:scale(1.035)}
-#labs .lab-caption{padding:15px 0 0;border-bottom:1px solid #d2d8d6;padding-bottom:16px}
-#labs .lab-index{
- display:flex;align-items:center;gap:10px;
- color:#9a8258;font:600 9px/1.5 Inter,Arial,sans-serif;letter-spacing:.13em;
-}
-#labs .lab-index i{display:inline-block;width:22px;height:1px;background:#b39b6d}
-#labs .lab-title-row{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:8px}
-#labs .lab-title-row h3{margin:0;color:#07385b;font:500 clamp(22px,2.1vw,27px)/1.2 Georgia,serif;letter-spacing:-.025em}
-#labs .lab-arrow{color:#9a8258;font:400 21px/1 Inter,Arial,sans-serif;transition:transform .2s}
-#labs .lab-feature:hover .lab-arrow{transform:translate(3px,-3px)}
-#labs .lab-caption p{margin-top:5px;color:#60727c;font:400 12px/1.7 Inter,Arial,sans-serif}
-@media(max-width:960px){
- #labs .labs-editorial{grid-template-columns:1fr 1fr;gap:30px 22px}
- #labs .labs-intro{grid-column:1/-1;max-width:560px}
- #labs .lab-visual{aspect-ratio:1.55/1}
-}
+
+/* Sequential full-bleed inspiration and lab showcases */
+.ecosystem{padding-top:72px;padding-bottom:48px}
+.inspiration-list{display:grid;gap:76px}
+.inspiration-entry{display:block;color:inherit}
+.inspiration-copy{max-width:850px;padding:0 0 22px}
+.inspiration-copy>span{color:#9a8258;font:600 9px/1.5 Inter,Arial,sans-serif;letter-spacing:.16em}
+.inspiration-copy h3{max-width:780px;margin:9px 0 5px;color:#07385b;font:500 clamp(27px,3.4vw,42px)/1.13 Georgia,serif;letter-spacing:-.035em}
+.inspiration-copy p{color:#60727c;font:12px/1.7 Inter,Arial,sans-serif;letter-spacing:.04em}
+.inspiration-copy i{display:inline-block;margin-top:12px;padding-bottom:4px;border-bottom:1px solid #b39b6d;color:#07385b;font:400 11px Inter,Arial,sans-serif;font-style:normal}
+.inspiration-image{position:relative;left:50%;width:100vw;margin-left:-50vw;overflow:hidden;background:#e9e7df;aspect-ratio:16/7;max-height:690px}
+.inspiration-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.78);transition:transform .7s cubic-bezier(.2,.65,.3,1)}
+.inspiration-entry:hover .inspiration-image img{transform:scale(1.018)}
+.image-note{margin-top:25px;color:#879198;font:10px/1.7 Inter,Arial,sans-serif;text-align:left}
+#labs{padding-top:72px}
+#labs .labs-editorial{display:block}
+#labs .labs-intro{max-width:600px;margin-bottom:58px}
+#labs .lab-feature{display:block;width:100%;margin:0 0 92px;color:inherit}
+#labs .lab-feature:last-child{margin-bottom:0}
+#labs .lab-heading{max-width:850px;padding:0 0 22px}
+#labs .lab-index{display:block;color:#9a8258;font:600 9px/1.5 Inter,Arial,sans-serif;letter-spacing:.15em}
+#labs .lab-title-row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:8px}
+#labs .lab-title-row h3{margin:0;color:#07385b;font:500 clamp(28px,3.5vw,42px)/1.13 Georgia,serif;letter-spacing:-.035em}
+#labs .lab-arrow{color:#9a8258;font:400 23px/1 Inter,Arial,sans-serif;transition:transform .2s}
+#labs .lab-feature:hover .lab-arrow{transform:translate(4px,-3px)}
+#labs .lab-heading p{margin-top:6px;color:#60727c;font:400 13px/1.7 Inter,Arial,sans-serif}
+#labs .lab-visual{position:relative;left:50%;width:100vw;margin-left:-50vw;overflow:hidden;background:#e9e7df;aspect-ratio:16/8;max-height:760px}
+#labs .lab-visual img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .7s cubic-bezier(.2,.65,.3,1)}
+#labs .lab-feature:hover .lab-visual img{transform:scale(1.012)}
 @media(max-width:600px){
- #labs .labs-editorial{grid-template-columns:1fr;gap:28px}
- #labs .labs-intro{grid-column:auto}
- #labs .lab-visual{aspect-ratio:1.55/1}
- #labs .lab-title-row h3{font-size:25px}
+ .ecosystem{padding-top:48px}
+ .inspiration-list{gap:48px}
+ .inspiration-copy{padding-bottom:16px}
+ .inspiration-copy h3{font-size:28px}
+ .inspiration-image{aspect-ratio:4/3}
+ #labs .labs-intro{margin-bottom:42px}
+ #labs .lab-feature{margin-bottom:58px}
+ #labs .lab-heading{padding-bottom:16px}
+ #labs .lab-visual{aspect-ratio:4/3}
 }
 </style>
 </head>
@@ -616,16 +614,14 @@ nav a:hover,nav a.on,footer nav a:hover{color:#8b744b!important}
 <section class="ecosystem" aria-label="Ideas and institutions that inspire our work">
  <div class="wrap">
   <div class="ecosystem-head"><span class="eyebrow">OUR INSPIRATION</span><p>Learning from the research culture and ambition shaping the AI ecosystem in Abu Dhabi.</p></div>
-  <div class="inspiration-grid">
-   <a class="inspiration mbzuai" href="https://mbzuai.ac.ae/" target="_blank" rel="noopener">
-    <img src="https://mbzuai.ac.ae/content/media/styles/5_4_small/public/media-centre/images/campus.jpg?itok=AR8Iz33H" alt="MBZUAI campus in Masdar City" loading="lazy">
-    <span class="image-shade"></span><span class="image-top">RESEARCH · EDUCATION · DISCOVERY</span>
-    <span class="image-copy"><small>ACADEMIC INSPIRATION</small><strong>Mohamed bin Zayed University<br>of Artificial Intelligence</strong><i>Explore MBZUAI ↗</i></span>
+  <div class="inspiration-list">
+   <a class="inspiration-entry mbzuai" href="https://mbzuai.ac.ae/" target="_blank" rel="noopener">
+    <div class="inspiration-copy"><span>01 / ACADEMIC INSPIRATION</span><h3>Mohamed bin Zayed University of Artificial Intelligence</h3><p>Research · Education · Discovery</p><i>Explore MBZUAI ↗</i></div>
+    <div class="inspiration-image"><img src="https://mbzuai.ac.ae/content/media/styles/5_4_small/public/media-centre/images/campus.jpg?itok=AR8Iz33H" alt="MBZUAI campus in Masdar City" loading="lazy"></div>
    </a>
-   <a class="inspiration g42" href="https://www.g42.ai/" target="_blank" rel="noopener">
-    <img src="https://www.g42.ai/application/files/cache/thumbnails/b5a001834c274952758b8c21bed798b7.jpg" alt="G42 community and technology ecosystem in Abu Dhabi" loading="lazy">
-    <span class="image-shade"></span><span class="image-top">AI · INFRASTRUCTURE · REAL-WORLD IMPACT</span>
-    <span class="image-copy"><small>INDUSTRY INSPIRATION</small><strong>G42<br>Inventing a better everyday.</strong><i>Explore G42 ↗</i></span>
+   <a class="inspiration-entry g42" href="https://www.g42.ai/" target="_blank" rel="noopener">
+    <div class="inspiration-copy"><span>02 / INDUSTRY INSPIRATION</span><h3>G42 — Inventing a better everyday.</h3><p>AI · Infrastructure · Real-world impact</p><i>Explore G42 ↗</i></div>
+    <div class="inspiration-image"><img src="https://www.g42.ai/application/files/cache/thumbnails/b5a001834c274952758b8c21bed798b7.jpg" alt="G42 community and technology ecosystem in Abu Dhabi" loading="lazy"></div>
    </a>
   </div>
   <p class="image-note">Independent student-led initiative. MBZUAI and G42 are featured as sources of inspiration; Think 42 AI Labs is not affiliated with or endorsed by either organisation. Images: <a href="https://mbzuai.ac.ae/news-events/media-center" target="_blank" rel="noopener">MBZUAI media center</a> and <a href="https://www.g42.ai/" target="_blank" rel="noopener">G42</a>.</p>
@@ -644,13 +640,13 @@ nav a:hover,nav a.on,footer nav a:hover{color:#8b744b!important}
 <section id="labs"><div class="wrap">
 <div class="labs-editorial">
 <div class="labs-intro"><span class="chip">Our Labs</span><h2>Explore Our Labs</h2><p class="sub" style="font-size:17px">Focused initiatives driving innovation across key areas of AI.</p><a class="btn dark" style="margin-top:26px;padding:14px 24px;font-size:14px" href="#lab-detail">View All Labs &nbsp;→</a></div>
-<a class="lab-feature" href="#k2-lab">
-<div class="lab-visual"><img src="/images/projects/thinkK2lab/Screenshot%20(182).png" alt="K2 Horizon Lab interface" loading="lazy"></div>
-<div class="lab-caption"><span class="lab-index">01 <i></i> RESEARCH &amp; EXPERIMENTATION</span><div class="lab-title-row"><h3>K2 Horizon Lab</h3><span class="lab-arrow">↗</span></div><p>AI for a smarter, greener future.</p></div>
-</a>
-<a class="lab-feature" href="#ioai-lab">
+<a class="lab-feature ioai-feature" href="#ioai-lab">
+<div class="lab-heading"><span class="lab-index">01 / EDUCATION &amp; OLYMPIAD PREPARATION</span><div class="lab-title-row"><h3>IOAI Lab</h3><span class="lab-arrow">↗</span></div><p>Preparing minds for AI Olympiads.</p></div>
 <div class="lab-visual"><img src="/images/projects/ioailab/Screenshot%20(184).png" alt="IOAI Lab learning platform" loading="lazy"></div>
-<div class="lab-caption"><span class="lab-index">02 <i></i> EDUCATION &amp; OLYMPIAD PREPARATION</span><div class="lab-title-row"><h3>IOAI Lab</h3><span class="lab-arrow">↗</span></div><p>Preparing minds for AI Olympiads.</p></div>
+</a>
+<a class="lab-feature k2-feature" href="#k2-lab">
+<div class="lab-heading"><span class="lab-index">02 / RESEARCH &amp; EXPERIMENTATION</span><div class="lab-title-row"><h3>K2 Horizon Lab</h3><span class="lab-arrow">↗</span></div><p>AI for a smarter, greener future.</p></div>
+<div class="lab-visual"><img src="/images/projects/thinkK2lab/Screenshot%20(182).png" alt="K2 Horizon Lab interface" loading="lazy"></div>
 </a>
 </div>
 
