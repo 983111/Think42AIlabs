@@ -533,6 +533,49 @@ nav a:hover,nav a.on,footer nav a:hover{color:#8b744b!important}
  .image-note{margin:22px 0 0!important;text-align:left!important}
 }
 
+
+/* Our Labs — editorial image-led presentation */
+#labs .labs-editorial{
+ display:grid;
+ grid-template-columns:.82fr 1.18fr 1.18fr;
+ gap:clamp(22px,2.4vw,34px);
+ align-items:start;
+}
+#labs .labs-intro{padding-top:4px}
+#labs .lab-feature{display:block;min-width:0;color:inherit}
+#labs .lab-visual{
+ position:relative;
+ overflow:hidden;
+ aspect-ratio:1.52/1;
+ background:#e9e7df;
+}
+#labs .lab-visual img{
+ display:block;width:100%;height:100%;object-fit:cover;object-position:top center;
+ transition:transform .55s cubic-bezier(.2,.65,.3,1);
+}
+#labs .lab-feature:hover .lab-visual img{transform:scale(1.035)}
+#labs .lab-caption{padding:15px 0 0;border-bottom:1px solid #d2d8d6;padding-bottom:16px}
+#labs .lab-index{
+ display:flex;align-items:center;gap:10px;
+ color:#9a8258;font:600 9px/1.5 Inter,Arial,sans-serif;letter-spacing:.13em;
+}
+#labs .lab-index i{display:inline-block;width:22px;height:1px;background:#b39b6d}
+#labs .lab-title-row{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:8px}
+#labs .lab-title-row h3{margin:0;color:#07385b;font:500 clamp(22px,2.1vw,27px)/1.2 Georgia,serif;letter-spacing:-.025em}
+#labs .lab-arrow{color:#9a8258;font:400 21px/1 Inter,Arial,sans-serif;transition:transform .2s}
+#labs .lab-feature:hover .lab-arrow{transform:translate(3px,-3px)}
+#labs .lab-caption p{margin-top:5px;color:#60727c;font:400 12px/1.7 Inter,Arial,sans-serif}
+@media(max-width:960px){
+ #labs .labs-editorial{grid-template-columns:1fr 1fr;gap:30px 22px}
+ #labs .labs-intro{grid-column:1/-1;max-width:560px}
+ #labs .lab-visual{aspect-ratio:1.55/1}
+}
+@media(max-width:600px){
+ #labs .labs-editorial{grid-template-columns:1fr;gap:28px}
+ #labs .labs-intro{grid-column:auto}
+ #labs .lab-visual{aspect-ratio:1.55/1}
+ #labs .lab-title-row h3{font-size:25px}
+}
 </style>
 </head>
 <body>
@@ -599,16 +642,16 @@ nav a:hover,nav a.on,footer nav a:hover{color:#8b744b!important}
 </div>
 
 <section id="labs"><div class="wrap">
-<div class="split">
-<div><span class="chip">Our Labs</span><h2>Explore Our Labs</h2><p class="sub" style="font-size:17px">Focused initiatives driving innovation across key areas of AI.</p><a class="btn dark" style="margin-top:26px;padding:14px 24px;font-size:14px" href="#lab-detail">View All Labs &nbsp;→</a></div>
-<a class="lab" href="#k2-lab">
-<img class="art" src="/images/projects/thinkK2lab/Screenshot%20(182).png" alt="K2 Horizon Lab interface" loading="lazy">
-<span class="ico"><svg viewBox="0 0 26 26"><path d="M13 22V11M13 15c-5 0-7-3-7-7 5 0 7 2 7 7zM13 12c0-4 2-6 7-6 0 4-2 6-7 6z"/></svg></span>
-<h3>K2 Horizon Lab</h3><p>AI for a smarter, greener future.</p><span class="go">→</span></a>
-<a class="lab" href="#ioai-lab">
-<img class="art" src="/images/projects/ioailab/Screenshot%20(184).png" alt="IOAI Lab learning platform" loading="lazy">
-<span class="ico"><svg viewBox="0 0 26 26"><path d="M8 4h10v6a5 5 0 0 1-10 0zM8 6H4c0 4 2 5 4 5M18 6h4c0 4-2 5-4 5M13 15v4M9 22h8M10 19h6"/></svg></span>
-<h3>IOAI Lab</h3><p>Preparing minds for AI Olympiads.</p><span class="go">→</span></a>
+<div class="labs-editorial">
+<div class="labs-intro"><span class="chip">Our Labs</span><h2>Explore Our Labs</h2><p class="sub" style="font-size:17px">Focused initiatives driving innovation across key areas of AI.</p><a class="btn dark" style="margin-top:26px;padding:14px 24px;font-size:14px" href="#lab-detail">View All Labs &nbsp;→</a></div>
+<a class="lab-feature" href="#k2-lab">
+<div class="lab-visual"><img src="/images/projects/thinkK2lab/Screenshot%20(182).png" alt="K2 Horizon Lab interface" loading="lazy"></div>
+<div class="lab-caption"><span class="lab-index">01 <i></i> RESEARCH &amp; EXPERIMENTATION</span><div class="lab-title-row"><h3>K2 Horizon Lab</h3><span class="lab-arrow">↗</span></div><p>AI for a smarter, greener future.</p></div>
+</a>
+<a class="lab-feature" href="#ioai-lab">
+<div class="lab-visual"><img src="/images/projects/ioailab/Screenshot%20(184).png" alt="IOAI Lab learning platform" loading="lazy"></div>
+<div class="lab-caption"><span class="lab-index">02 <i></i> EDUCATION &amp; OLYMPIAD PREPARATION</span><div class="lab-title-row"><h3>IOAI Lab</h3><span class="lab-arrow">↗</span></div><p>Preparing minds for AI Olympiads.</p></div>
+</a>
 </div>
 
 <div class="detail" id="lab-detail">
