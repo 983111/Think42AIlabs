@@ -158,7 +158,7 @@ nav a:hover,nav a.on{color:#08709a;border-color:#b39b6d}
 .btn.dark{background:#07385b;border-color:#07385b;color:white}
 .btn.light{border-color:#c7d0d2;color:#07385b}
 .hero{background:#07385b;min-height:660px;isolation:isolate}
-.hero:before{content:"";position:absolute;inset:0;z-index:-2;background-image:linear-gradient(90deg,rgba(4,35,58,.94) 0%,rgba(4,35,58,.79) 42%,rgba(4,35,58,.26) 100%),url("https://www.g42.ai/application/files/cache/thumbnails/b5a001834c274952758b8c21bed798b7.jpg");background-size:cover;background-position:center 45%;filter:saturate(.7)}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background-image:linear-gradient(90deg,rgba(4,35,58,.94) 0%,rgba(4,35,58,.79) 42%,rgba(4,35,58,.26) 100%),url("https://www.g42.ai/application/files/cache/thumbnails/3a1ff7604f3c42633f48967ece852ed5.jpg");background-size:cover;background-position:center 45%;filter:saturate(.7)}
 .hero:after{content:"";position:absolute;inset:0;z-index:-1;opacity:.13;background-image:repeating-linear-gradient(45deg,transparent 0 21px,rgba(239,225,195,.6) 22px,transparent 23px 44px),repeating-linear-gradient(-45deg,transparent 0 21px,rgba(239,225,195,.5) 22px,transparent 23px 44px);mask-image:linear-gradient(90deg,#000,transparent 85%)}
 .hero .wrap{grid-template-columns:1fr;min-height:660px;align-items:center;gap:0}
 .hero .wrap>div:first-child{max-width:760px;padding:75px 0}
@@ -206,9 +206,13 @@ h2{margin:16px 0 13px;color:#07385b;font:500 clamp(34px,4vw,48px)/1.1 Georgia,se
 .box ul{gap:8px;margin-top:14px;color:#526a79;font:12px/1.7 Inter,Arial,sans-serif}
 .box li{padding-left:14px}
 .box li:before{background:#b39b6d}
-.projects{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:34px}
-.proj{padding:0;background:transparent;border:0;border-radius:0;box-shadow:none}
-.proj .project-cover{height:210px;border-radius:0;margin-bottom:17px;filter:saturate(.8)}
+/* Project showcases: one project per row, with its own large image */
+.projects{display:grid;grid-template-columns:1fr;gap:76px;margin-top:42px}
+.proj{display:block;padding:0;background:transparent;border:0;border-radius:0;box-shadow:none}
+.proj .project-cover{display:block;width:100%;max-width:1120px;height:auto;aspect-ratio:16/7;max-height:430px;object-fit:cover;object-position:center;margin:0 auto 22px;border-radius:2px;filter:saturate(.82)}
+.proj .tag,.proj h3,.proj p,.proj ul{max-width:850px}
+.proj .tag{display:block}
+.proj ul{padding-left:18px}
 .proj .tag{border:0;border-radius:0;background:transparent;padding:0;margin-bottom:11px;color:#9a8258;font:600 9px Inter,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}
 .proj h3{font:500 24px Georgia,serif;color:#07385b}
 .proj p{margin-top:7px;color:#60727c;font:13px/1.75 Inter,Arial,sans-serif}
@@ -569,6 +573,8 @@ nav a:hover,nav a.on,footer nav a:hover{color:#8b744b!important}
  .inspiration-copy{padding-bottom:16px}
  .inspiration-copy h3{font-size:28px}
   .inspiration-image{aspect-ratio:16/9;max-height:280px}
+ .projects{gap:52px}
+ .proj .project-cover{aspect-ratio:16/9;max-height:280px;margin-bottom:17px}
  #labs .labs-intro{margin-bottom:42px}
  #labs .lab-feature{margin-bottom:58px}
  #labs .lab-heading{padding-bottom:16px}
@@ -621,7 +627,7 @@ nav a:hover,nav a.on,footer nav a:hover{color:#8b744b!important}
    </a>
    <a class="inspiration-entry g42" href="https://www.g42.ai/" target="_blank" rel="noopener">
     <div class="inspiration-copy"><span>02 / INDUSTRY INSPIRATION</span><h3>G42 — Inventing a better everyday.</h3><p>AI · Infrastructure · Real-world impact</p><i>Explore G42 ↗</i></div>
-    <div class="inspiration-image"><img src="https://www.g42.ai/application/files/cache/thumbnails/b5a001834c274952758b8c21bed798b7.jpg" alt="G42 community and technology ecosystem in Abu Dhabi" loading="lazy"></div>
+    <div class="inspiration-image"><img src="https://www.g42.ai/application/files/cache/thumbnails/3a1ff7604f3c42633f48967ece852ed5.jpg" alt="G42 community and technology ecosystem in Abu Dhabi" loading="lazy"></div>
    </a>
   </div>
   <p class="image-note">Independent student-led initiative. MBZUAI and G42 are featured as sources of inspiration; Think 42 AI Labs is not affiliated with or endorsed by either organisation. Images: <a href="https://mbzuai.ac.ae/news-events/media-center" target="_blank" rel="noopener">MBZUAI media center</a> and <a href="https://www.g42.ai/" target="_blank" rel="noopener">G42</a>.</p>
