@@ -208,7 +208,7 @@ h2{margin:16px 0 13px;color:#07385b;font:500 clamp(34px,4vw,48px)/1.1 Georgia,se
 .box li:before{background:#b39b6d}
 .projects{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:34px}
 .proj{padding:0;background:transparent;border:0;border-radius:0;box-shadow:none}
-.proj .project-cover{height:210px;border-radius:0;margin-bottom:17px;filter:saturate(.8)}
+.proj .project-cover{height:auto;aspect-ratio:16/10;min-height:250px;max-height:340px;border-radius:16px;margin-bottom:17px;filter:saturate(.8);object-fit:cover}
 .proj .tag{border:0;border-radius:0;background:transparent;padding:0;margin-bottom:11px;color:#9a8258;font:600 9px Inter,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}
 .proj h3{font:500 24px Georgia,serif;color:#07385b}
 .proj p{margin-top:7px;color:#60727c;font:13px/1.75 Inter,Arial,sans-serif}
@@ -560,7 +560,7 @@ nav a:hover,nav a.on,footer nav a:hover{color:#8b744b!important}
 #labs .lab-arrow{color:#9a8258;font:400 23px/1 Inter,Arial,sans-serif;transition:transform .2s}
 #labs .lab-feature:hover .lab-arrow{transform:translate(4px,-3px)}
 #labs .lab-heading p{margin-top:6px;color:#60727c;font:400 13px/1.7 Inter,Arial,sans-serif}
-#labs .lab-visual{width:100%;max-width:1120px;margin:0 auto;overflow:hidden;background:#e9e7df;aspect-ratio:16/7;max-height:490px;border-radius:2px}
+#labs .lab-visual{width:100%;max-width:1120px;margin:0 auto;overflow:hidden;background:#e9e7df;aspect-ratio:16/9;max-height:560px;border-radius:16px}
 #labs .lab-visual img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .7s cubic-bezier(.2,.65,.3,1)}
 #labs .lab-feature:hover .lab-visual img{transform:scale(1.012)}
 @media(max-width:600px){
@@ -572,7 +572,7 @@ nav a:hover,nav a.on,footer nav a:hover{color:#8b744b!important}
  #labs .labs-intro{margin-bottom:42px}
  #labs .lab-feature{margin-bottom:58px}
  #labs .lab-heading{padding-bottom:16px}
- #labs .lab-visual{aspect-ratio:16/9;max-height:300px}
+ #labs .lab-visual{aspect-ratio:16/10;max-height:360px;border-radius:14px}
 }
 </style>
 </head>
