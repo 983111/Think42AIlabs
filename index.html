@@ -206,13 +206,9 @@ h2{margin:16px 0 13px;color:#07385b;font:500 clamp(34px,4vw,48px)/1.1 Georgia,se
 .box ul{gap:8px;margin-top:14px;color:#526a79;font:12px/1.7 Inter,Arial,sans-serif}
 .box li{padding-left:14px}
 .box li:before{background:#b39b6d}
-/* Project showcases: one project per row, with its own large image */
-.projects{display:grid;grid-template-columns:1fr;gap:76px;margin-top:42px}
-.proj{display:block;padding:0;background:transparent;border:0;border-radius:0;box-shadow:none}
-.proj .project-cover{display:block;width:100%;max-width:1120px;height:auto;aspect-ratio:16/7;max-height:430px;object-fit:cover;object-position:center;margin:0 auto 22px;border-radius:2px;filter:saturate(.82)}
-.proj .tag,.proj h3,.proj p,.proj ul{max-width:850px}
-.proj .tag{display:block}
-.proj ul{padding-left:18px}
+.projects{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:34px}
+.proj{padding:0;background:transparent;border:0;border-radius:0;box-shadow:none}
+.proj .project-cover{height:210px;border-radius:0;margin-bottom:17px;filter:saturate(.8)}
 .proj .tag{border:0;border-radius:0;background:transparent;padding:0;margin-bottom:11px;color:#9a8258;font:600 9px Inter,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}
 .proj h3{font:500 24px Georgia,serif;color:#07385b}
 .proj p{margin-top:7px;color:#60727c;font:13px/1.75 Inter,Arial,sans-serif}
@@ -573,8 +569,6 @@ nav a:hover,nav a.on,footer nav a:hover{color:#8b744b!important}
  .inspiration-copy{padding-bottom:16px}
  .inspiration-copy h3{font-size:28px}
   .inspiration-image{aspect-ratio:16/9;max-height:280px}
- .projects{gap:52px}
- .proj .project-cover{aspect-ratio:16/9;max-height:280px;margin-bottom:17px}
  #labs .labs-intro{margin-bottom:42px}
  #labs .lab-feature{margin-bottom:58px}
  #labs .lab-heading{padding-bottom:16px}
