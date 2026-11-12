@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "cleanUrls": true,
   "builds": [
     {
       "src": "index.html",
@@ -23,30 +24,6 @@
     }
   ],
   "rewrites": [
-    {
-      "source": "/founder",
-      "destination": "/founder.html"
-    },
-    {
-      "source": "/founder/",
-      "destination": "/founder.html"
-    },
-    {
-      "source": "/privacy",
-      "destination": "/privacy.html"
-    },
-    {
-      "source": "/privacy/",
-      "destination": "/privacy.html"
-    },
-    {
-      "source": "/terms",
-      "destination": "/terms.html"
-    },
-    {
-      "source": "/terms/",
-      "destination": "/terms.html"
-    },
     {
       "source": "/images/:path*",
       "destination": "/public/images/:path*"
