@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "cleanUrls": true,
   "builds": [
     {
       "src": "index.html",
@@ -24,6 +23,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/founder",
+      "destination": "/founder.html"
+    },
     {
       "source": "/images/:path*",
       "destination": "/public/images/:path*"
