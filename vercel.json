@@ -10,6 +10,14 @@
       "use": "@vercel/static"
     },
     {
+      "src": "privacy.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "terms.html",
+      "use": "@vercel/static"
+    },
+    {
       "src": "public/**",
       "use": "@vercel/static"
     }
@@ -22,6 +30,22 @@
     {
       "source": "/founder/",
       "destination": "/founder.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/privacy/",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.html"
+    },
+    {
+      "source": "/terms/",
+      "destination": "/terms.html"
     },
     {
       "source": "/images/:path*",
