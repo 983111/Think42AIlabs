@@ -14,17 +14,18 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/founder/?$",
-      "dest": "/founder.html"
+      "source": "/founder",
+      "destination": "/founder.html"
     },
     {
-      "src": "/images/(.*)",
-      "dest": "/public/images/$1"
+      "source": "/founder/",
+      "destination": "/founder.html"
     },
     {
-      "handle": "filesystem"
+      "source": "/images/:path*",
+      "destination": "/public/images/:path*"
     }
   ]
 }
