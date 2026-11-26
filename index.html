@@ -168,7 +168,7 @@ nav a:hover,nav a.on{color:#08709a;border-color:#b39b6d}
 .btn.dark{background:#07385b;border-color:#07385b;color:white}
 .btn.light{border-color:#c7d0d2;color:#07385b}
 .hero{background:#07385b;min-height:660px;isolation:isolate}
-.hero:before{content:"";position:absolute;inset:0;z-index:-2;background-image:linear-gradient(90deg,rgba(7,39,59,.96) 0%,rgba(7,39,59,.82) 36%,rgba(7,39,59,.28) 100%),url("https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/5_Pionen_Data_Centre.tif/lossy-page1-1920px-5_Pionen_Data_Centre.tif.jpg");background-size:cover;background-position:center 48%;filter:none}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background-image:none;background-size:cover;background-position:center 48%;filter:none}
 .hero-credit{position:absolute;right:24px;bottom:14px;z-index:2;color:rgba(255,255,255,.72);font:10px/1.4 Inter,Arial,sans-serif;letter-spacing:.02em}.hero-credit:hover{color:#fff}
 .hero:after{content:"";position:absolute;inset:0;z-index:-1;opacity:.13;background-image:repeating-linear-gradient(45deg,transparent 0 21px,rgba(239,225,195,.6) 22px,transparent 23px 44px),repeating-linear-gradient(-45deg,transparent 0 21px,rgba(239,225,195,.5) 22px,transparent 23px 44px);mask-image:linear-gradient(90deg,#000,transparent 85%)}
 .hero .wrap{grid-template-columns:1fr;min-height:660px;align-items:center;gap:0}
@@ -913,18 +913,7 @@ const TEAMS=[
 {n:'Software Engineering Team',s:'2 Team Leaders · 5 Team Members',g:[['Team Leaders',['Ishimwe Bonheur','Syrin Alabrach']],['Team Members',['KALIZA Esther','Vieira Isimbi Ntwali','Kundan Kumar','Jean Pierre Hitayezu','Jackson NSANZIMANA']]]}
 ];
 const root=document.getElementById('teams');
-const TEAM_PHOTOS={
-'Muhammad Safwan Ahmad Saffi':'muhammad-safwan-ahmad-saffi.jpg',
-'Habib Bashir Lawal':'Habib Bashir Lawal.jpg',
-'Om Mahadik':'Om Mahadik.jpg',
-'Eugene Mutuyimana':'Eugene Mutuyimana.jpg',
-'Owojori Oluwajuwonlo Emmanuel':'Owojori Oluwajuwonlo Emmanuel.jpg',
-'Syrin Alabrach':'Syrin Alabrach.jpg',
-'KALIZA Esther':'KALIZA Esther.jpg',
-'Kundan Kumar':'Kundan Kumar.jpg',
-'Jean Pierre Hitayezu':'Jean Pierre Hitayezu.jpg',
-'Jackson NSANZIMANA':'Jackson NSANZIMANA.jpg'
-};
+const TEAM_PHOTOS={};
 TEAMS.forEach(t=>{
  const sec=document.createElement('section');sec.className='tm';
  sec.innerHTML='<div class="tm-h"><h3></h3><span></span></div>';
@@ -987,7 +976,7 @@ lb.querySelector('.lbp').onclick=e=>{e.stopPropagation();LB.i=(LB.i+LB.s.length-
 lb.querySelector('.lbf').onclick=e=>{e.stopPropagation();LB.i=(LB.i+1)%LB.s.length;lbShow()};
 addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')lb.hidden=true;if(e.key==='ArrowLeft')lb.querySelector('.lbp').click();if(e.key==='ArrowRight')lb.querySelector('.lbf').click()});
 function renderProj(P){
- pv.innerHTML=`<div class='wrap'><div class='lh'><a class='back' href='#projects'>← Back to projects</a><div class='lgrid'><div><div style='margin-top:28px'><span class='chip'>${P.domain}</span></div><h2>${P.name}</h2><p class='sub'>${P.tag}</p><div class='prose'>${P.intro.map(p=>`<p>${p}</p>`).join('')}</div></div><aside class='lpanel'><dl>${P.facts.map(f=>`<div><dt>${f[0]}</dt><dd>${f[1]}</dd></div>`).join('')}</dl></aside></div></div><div class='lsec'><h3 class='t'>Platform Preview</h3><div class='gal'>${P.shots.map((s,i)=>`<button type='button'><img src='${P.dir}${s}' alt='${P.name} screenshot ${i+1}' loading='lazy'></button>`).join('')}</div></div><div class='lsec'><h3 class='t'>Key features</h3><div class='areas'>${P.feat.map(c=>`<div class='box'><h3>${c[0]}</h3><p>${c[1]}</p></div>`).join('')}</div></div><div class='lsec'><h3 class='t'>Technology and development</h3><div class='box' style='margin-top:20px'><p>${P.tech}</p></div></div>${P.status?`<div class='lsec'><h3 class='t'>Development status</h3><div class='box' style='margin-top:20px'><p>${P.status}</p></div></div>`:''}<div class='vis'><h3 class='t'>Vision</h3><p>${P.vision}</p></div></div>`;
+ pv.innerHTML=`<div class='wrap'><div class='lh'><a class='back' href='#projects'>← Back to projects</a><div class='lgrid'><div><div style='margin-top:28px'><span class='chip'>${P.domain}</span></div><h2>${P.name}</h2><p class='sub'>${P.tag}</p><div class='prose'>${P.intro.map(p=>`<p>${p}</p>`).join('')}</div></div><aside class='lpanel'><dl>${P.facts.map(f=>`<div><dt>${f[0]}</dt><dd>${f[1]}</dd></div>`).join('')}</dl></aside></div></div><div class='lsec text-only-preview'><h3 class='t'>How the platform is organised</h3><p class='sub'>The project pages describe the product's purpose, core capabilities, technical approach, and development direction without relying on interface screenshots.</p></div><div class='lsec'><h3 class='t'>Key features</h3><div class='areas'>${P.feat.map(c=>`<div class='box'><h3>${c[0]}</h3><p>${c[1]}</p></div>`).join('')}</div></div><div class='lsec'><h3 class='t'>Technology and development</h3><div class='box' style='margin-top:20px'><p>${P.tech}</p></div></div>${P.status?`<div class='lsec'><h3 class='t'>Development status</h3><div class='box' style='margin-top:20px'><p>${P.status}</p></div></div>`:''}<div class='vis'><h3 class='t'>Vision</h3><p>${P.vision}</p></div></div>`;
  const btns=[...pv.querySelectorAll('.gal button')];
  btns.forEach((b,i)=>{const im=b.querySelector('img');
   im.addEventListener('error',()=>{b.outerHTML=`<div class='miss'>${P.shots[i]}</div>`});
@@ -998,7 +987,7 @@ function panel(L){
  return `<aside class='lpanel'><svg viewBox='0 0 400 170' fill='none' stroke='currentColor' stroke-width='1' aria-hidden='true' style='color:var(--mute)'><path d='M40 120L120 50L200 100L280 40L360 110M120 50L200 140L280 40M40 120L200 140L360 110M200 100L360 110' opacity='.5'/><circle cx='40' cy='120' r='6' fill='currentColor'/><circle cx='120' cy='50' r='8' fill='currentColor'/><circle cx='200' cy='100' r='10' fill='currentColor'/><circle cx='280' cy='40' r='7' fill='currentColor'/><circle cx='360' cy='110' r='6' fill='currentColor'/><circle cx='200' cy='140' r='5' fill='currentColor'/></svg><dl><div><dt>Part of</dt><dd>Think 42 AI Labs</dd></div><div><dt>Built for</dt><dd>${L.aud}</dd></div><div><dt>Focus</dt><dd>${L.foc}</dd></div><div><dt>Core areas</dt><dd>${L.core.length}</dd></div></dl></aside>`;
 }
 function renderLab(L){
- lv.innerHTML=`<div class='wrap'><div class='lh'><a class='back' href='#labs'>← Back to labs</a><div class='lgrid'><div><div style='margin-top:28px'><span class='chip'>Lab</span></div><h2>${L.name}</h2><p class='sub'>${L.tag}</p><div class='prose'>${L.intro.map(p=>`<p>${p}</p>`).join('')}</div><div class='lcta'><a class='btn dark' href='${L.url}' target='_blank' rel='noopener'>Visit ${L.name} ↗</a><a class='btn light' href='#labs'>All labs</a></div></div>${panel(L)}</div></div><div class='lsec'><h3 class='t'>Platform Preview</h3><div class='gal'>${L.shots.map((shot,i)=>`<button type='button'><img src='${L.dir}${encodeURIComponent(shot)}' alt='${L.name} screenshot ${i+1}' loading='lazy'></button>`).join('')}</div></div><div class='lsec'><h3 class='t'>Core areas</h3><div class='areas'>${L.core.map(c=>`<div class='box'><h3>${c[0]}</h3><p>${c[1]}</p></div>`).join('')}</div></div><div class='lsec'><h3 class='t'>${L.focusT}</h3><div class='box' style='margin-top:20px'><p>${L.focusI}</p><ul class='two'>${L.focus.map(f=>`<li>${f}</li>`).join('')}</ul></div></div><div class='vis'><h3 class='t'>Long-term vision</h3>${L.vision.map(p=>`<p>${p}</p>`).join('')}</div></div>`;
+ lv.innerHTML=`<div class='wrap'><div class='lh'><a class='back' href='#labs'>← Back to labs</a><div class='lgrid'><div><div style='margin-top:28px'><span class='chip'>Lab</span></div><h2>${L.name}</h2><p class='sub'>${L.tag}</p><div class='prose'>${L.intro.map(p=>`<p>${p}</p>`).join('')}</div><div class='lcta'><a class='btn dark' href='${L.url}' target='_blank' rel='noopener'>Visit ${L.name} ↗</a><a class='btn light' href='#labs'>All labs</a></div></div>${panel(L)}</div></div><div class='lsec text-only-preview'><h3 class='t'>How the platform is organised</h3><p class='sub'>The project pages describe the product's purpose, core capabilities, technical approach, and development direction without relying on interface screenshots.</p></div><div class='lsec'><h3 class='t'>Core areas</h3><div class='areas'>${L.core.map(c=>`<div class='box'><h3>${c[0]}</h3><p>${c[1]}</p></div>`).join('')}</div></div><div class='lsec'><h3 class='t'>${L.focusT}</h3><div class='box' style='margin-top:20px'><p>${L.focusI}</p><ul class='two'>${L.focus.map(f=>`<li>${f}</li>`).join('')}</ul></div></div><div class='vis'><h3 class='t'>Long-term vision</h3>${L.vision.map(p=>`<p>${p}</p>`).join('')}</div></div>`;
  const btns=[...lv.querySelectorAll('.gal button')];
  btns.forEach((b,i)=>{const im=b.querySelector('img');im.addEventListener('click',()=>{LB.s=[...lv.querySelectorAll('.gal img')].map(x=>x.src);LB.i=i;lbShow()});im.addEventListener('error',()=>{b.outerHTML=`<div class='miss'>${L.shots[i]}</div>`})});
 }
