@@ -168,7 +168,7 @@ nav a:hover,nav a.on{color:#08709a;border-color:#b39b6d}
 .btn.dark{background:#07385b;border-color:#07385b;color:white}
 .btn.light{border-color:#c7d0d2;color:#07385b}
 .hero{background:#07385b;min-height:660px;isolation:isolate}
-.hero:before{content:"";position:absolute;inset:0;z-index:-2;background-image:none;background-size:cover;background-position:center 48%;filter:none}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background-image:linear-gradient(90deg,rgba(7,39,59,.96) 0%,rgba(7,39,59,.82) 36%,rgba(7,39,59,.28) 100%),url("https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/5_Pionen_Data_Centre.tif/lossy-page1-1920px-5_Pionen_Data_Centre.tif.jpg");background-size:cover;background-position:center 48%;filter:none}
 .hero-credit{position:absolute;right:24px;bottom:14px;z-index:2;color:rgba(255,255,255,.72);font:10px/1.4 Inter,Arial,sans-serif;letter-spacing:.02em}.hero-credit:hover{color:#fff}
 .hero:after{content:"";position:absolute;inset:0;z-index:-1;opacity:.13;background-image:repeating-linear-gradient(45deg,transparent 0 21px,rgba(239,225,195,.6) 22px,transparent 23px 44px),repeating-linear-gradient(-45deg,transparent 0 21px,rgba(239,225,195,.5) 22px,transparent 23px 44px);mask-image:linear-gradient(90deg,#000,transparent 85%)}
 .hero .wrap{grid-template-columns:1fr;min-height:660px;align-items:center;gap:0}
@@ -639,142 +639,6 @@ nav a:hover,nav a.on,footer nav a:hover{color:#8b744b!important}
  .image-note{padding:0 22px!important}
 }
 
-
-/* Think 42 editorial redesign — typography and text-led layouts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-:root{color-scheme:light!important;--bg:#fff!important;--bg2:#f5f3f0!important;--ink:#142b45!important;--mute:#536477!important;--line:#e7e4e0!important;--btn:#142b45!important;--btn-ink:#fff!important;--card:transparent!important}
-html,body{background:#fff!important;color:#142b45!important}
-body{font-family:'Poppins',Arial,sans-serif!important;font-weight:400!important;line-height:1.7!important}
-.wrap{max-width:1240px!important;padding-left:clamp(22px,6.9vw,96px)!important;padding-right:clamp(22px,6.9vw,96px)!important}
-header,footer,.ecosystem{background:#fff!important}
-header{backdrop-filter:none!important;border-color:#eeeae6!important}
-.nav{height:82px!important}
-.logo{font-family:'Poppins',Arial,sans-serif!important;font-size:15px!important;font-weight:600!important;color:#142b45!important}
-.logo b{width:36px!important;height:36px!important;border-radius:50%!important;background:#ff4b24!important;color:#fff!important;font:600 13px Poppins,Arial,sans-serif!important}
-.logo i{background:#dedbd7!important}
-nav ul{gap:clamp(14px,2.4vw,34px)!important;font:500 12px Poppins,Arial,sans-serif!important}
-nav a{color:#43566a!important;border-color:transparent!important}
-nav a:hover,nav a.on{color:#ff4b24!important;border-color:#ff4b24!important}
-.pill{border:1px solid #ff4b24!important;border-radius:2px!important;color:#ff4b24!important;background:#fff!important;font:500 11px Poppins,Arial,sans-serif!important}
-.btn{border-radius:2px!important;padding:14px 21px!important;font:500 12px Poppins,Arial,sans-serif!important}
-.btn.dark{background:#ff4b24!important;border-color:#ff4b24!important;color:#fff!important}
-.btn.light{border-color:#d9d5d0!important;color:#142b45!important;background:transparent!important}
-.hero{min-height:0!important;background:#fff!important;overflow:visible!important}
-.hero:before,.hero:after{display:none!important}
-.hero .wrap{display:block!important;min-height:0!important;padding-top:clamp(86px,11vw,150px)!important;padding-bottom:clamp(62px,8vw,110px)!important}
-.hero .wrap>div:first-child{max-width:850px!important;padding:0!important}
-.chip{display:inline-block!important;background:transparent!important;color:#ff4b24!important;padding:0!important;border:0!important;border-radius:0!important;font:600 11px Poppins,Arial,sans-serif!important;letter-spacing:.03em!important;text-transform:none!important}
-h1{max-width:900px!important;margin:20px 0 25px!important;color:#142b45!important;font:500 clamp(48px,7.1vw,88px)/1.12 Poppins,Arial,sans-serif!important;letter-spacing:-.055em!important}
-.lead{max-width:720px!important;color:#43566a!important;font:400 clamp(17px,2vw,22px)/1.75 Poppins,Arial,sans-serif!important}
-.cta{gap:14px!important;margin-top:30px!important}
-.hero-statement{max-width:790px;margin-top:38px;padding-top:22px;border-top:1px solid #e7e4e0}
-.hero-statement>span,.hero-statement>p{display:block}
-.hero-statement>span{color:#ff4b24;font-size:10px;font-weight:600;letter-spacing:.12em}
-.hero-statement>p{max-width:670px;margin:10px 0 23px;color:#43566a;font-size:16px;line-height:1.8}
-.hero-index{display:flex;align-items:center;gap:12px;flex-wrap:wrap;color:#536477;font-size:11px}
-.hero-index b{color:#ff4b24;font-weight:600}.hero-index i{width:18px;height:1px;background:#d8d3cd}
-.glass,.hero-credit{display:none!important}
-section{padding:clamp(48px,6vw,76px) 0!important}
-.ecosystem{padding-top:26px!important;padding-bottom:30px!important}
-.ecosystem-head{display:grid!important;grid-template-columns:minmax(150px,.55fr) minmax(0,1.45fr)!important;gap:28px!important;border-bottom:1px solid #e7e4e0!important;padding-bottom:20px!important;margin-bottom:26px!important}
-.eyebrow{color:#ff4b24!important;font:600 10px Poppins,Arial,sans-serif!important;letter-spacing:.06em!important}
-.ecosystem-head p{color:#43566a!important;font:400 16px/1.8 Poppins,Arial,sans-serif!important}
-.inspiration-list{display:grid!important;grid-template-columns:1fr 1fr!important;gap:22px!important}
-.inspiration-entry{display:flex!important;flex-direction:column!important;min-height:0!important;background:#f5f3f0!important;color:#142b45!important;overflow:hidden!important}
-.inspiration-copy{padding:27px 28px 12px!important;display:block!important}
-.inspiration-copy>span:first-child{color:#ff4b24!important;font:600 10px Poppins,Arial,sans-serif!important;letter-spacing:.08em!important}
-.inspiration-copy h3{margin:14px 0 9px!important;color:#142b45!important;font:500 clamp(23px,2.7vw,34px)/1.2 Poppins,Arial,sans-serif!important;letter-spacing:-.04em!important}
-.inspiration-copy p{color:#536477!important;font:400 13px/1.7 Poppins,Arial,sans-serif!important}
-.feature-caption{margin-top:14px!important;color:#ff4b24!important;font:500 11px Poppins,Arial,sans-serif!important}
-.inspiration-image.text-visual{display:flex!important;flex-direction:column!important;justify-content:flex-end!important;gap:10px!important;height:auto!important;min-height:205px!important;aspect-ratio:auto!important;padding:25px 28px!important;background:#eeece8!important;color:#142b45!important}
-.text-visual>span{color:#ff4b24!important;font-size:9px!important;font-weight:600!important;letter-spacing:.13em!important}
-.text-visual>strong{max-width:470px;color:#142b45!important;font-size:clamp(21px,2.5vw,30px)!important;font-weight:500!important;line-height:1.25!important;letter-spacing:-.035em!important}
-.text-visual>p{max-width:500px;color:#536477!important;font-size:12px!important;line-height:1.7!important}
-.text-visual>small{margin-top:5px;color:#ff4b24!important;font-size:9px!important;font-weight:600!important;letter-spacing:.06em!important}
-.pillars{padding:42px 0 55px!important;grid-template-columns:repeat(4,1fr)!important}
-.pillar{padding:0 20px!important;border-color:#e7e4e0!important}
-.pillar svg{display:none!important}
-.pillar h3{color:#142b45!important;font:500 16px Poppins,Arial,sans-serif!important}
-.pillar p{color:#536477!important;font:400 12px/1.7 Poppins,Arial,sans-serif!important}
-h2{color:#142b45!important;font:500 clamp(32px,4.3vw,48px)/1.18 Poppins,Arial,sans-serif!important;letter-spacing:-.045em!important}
-.sub{color:#536477!important;font:400 15px/1.8 Poppins,Arial,sans-serif!important}
-#labs .labs-intro{max-width:720px!important;margin-bottom:42px!important}
-#labs .labs-intro .btn{margin-top:20px!important}
-#labs .lab-feature{display:grid!important;grid-template-columns:1fr 1fr!important;min-height:0!important;margin:0 0 18px!important;width:100%!important;background:#f5f3f0!important;color:#142b45!important}
-#labs .lab-feature.k2-feature{background:#f5f3f0!important}
-#labs .lab-heading{padding:clamp(25px,4vw,48px)!important;justify-content:center!important;color:#142b45!important}
-#labs .lab-index{color:#ff4b24!important;font:600 10px Poppins,Arial,sans-serif!important}
-#labs .lab-heading h3{margin:16px 0 9px!important;color:#142b45!important;font:500 clamp(27px,3.5vw,42px)/1.15 Poppins,Arial,sans-serif!important;letter-spacing:-.045em!important}
-#labs .lab-heading p{color:#43566a!important;font:500 14px/1.7 Poppins,Arial,sans-serif!important}
-#labs .lab-description{color:#536477!important;font:400 12px/1.8 Poppins,Arial,sans-serif!important}
-#labs .lab-visit{color:#ff4b24!important;font:600 11px Poppins,Arial,sans-serif!important}
-#labs .lab-visual.text-visual{display:flex!important;min-height:280px!important;height:auto!important;max-height:none!important;padding:clamp(25px,4vw,48px)!important;align-items:flex-start!important;justify-content:center!important;background:#eeece8!important;border-radius:0!important}
-.detail{gap:35px!important}
-.box{border:0!important;border-top:1px solid #e7e4e0!important;border-radius:0!important;background:transparent!important;padding:22px 0 0!important}
-.box h3{color:#142b45!important;font:500 21px Poppins,Arial,sans-serif!important}
-.box p,.box ul{color:#536477!important;font:400 12px/1.8 Poppins,Arial,sans-serif!important}
-.box li:before{background:#ff4b24!important}
-.projects{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:30px!important}
-.proj{background:transparent!important;border:0!important;padding:0!important}
-.proj .project-cover{display:none!important}
-.project-cover-text{display:flex;flex-direction:column;justify-content:flex-end;min-height:190px;padding:23px;background:#f5f3f0;margin-bottom:20px}
-.project-cover-text span{color:#ff4b24;font-size:9px;font-weight:600;letter-spacing:.1em}
-.project-cover-text strong{margin-top:14px;color:#142b45;font-size:28px;font-weight:500;letter-spacing:-.04em}
-.project-cover-text small{margin-top:5px;color:#536477;font-size:12px;line-height:1.6}
-.proj .tag{color:#ff4b24!important;font:600 9px Poppins,Arial,sans-serif!important;letter-spacing:.04em!important}
-.proj h3{color:#142b45!important;font:500 21px Poppins,Arial,sans-serif!important}
-.proj p,.proj ul{color:#536477!important;font:400 12px/1.8 Poppins,Arial,sans-serif!important}
-.team{border:0!important;border-top:1px solid #e7e4e0!important;border-bottom:1px solid #e7e4e0!important;border-radius:0!important}
-.team div{padding:25px 20px!important;border-color:#e7e4e0!important}
-.team strong{color:#142b45!important;font:500 44px Poppins,Arial,sans-serif!important}
-.team span{color:#142b45!important;font:500 12px Poppins,Arial,sans-serif!important}
-.team small{color:#536477!important;font:400 11px/1.7 Poppins,Arial,sans-serif!important}
-.principles{border-top:1px solid #e7e4e0!important}
-.principles div{border-bottom:1px solid #e7e4e0!important}
-.principles h3{color:#142b45!important;font:500 16px Poppins,Arial,sans-serif!important}
-.principles p{color:#536477!important;font:400 12px/1.7 Poppins,Arial,sans-serif!important}
-.banner{border-top:1px solid #e7e4e0!important;border-bottom:1px solid #e7e4e0!important}
-.banner h2{color:#142b45!important;font:500 clamp(26px,3.5vw,38px)/1.2 Poppins,Arial,sans-serif!important}
-.banner p{color:#536477!important;font:400 14px/1.8 Poppins,Arial,sans-serif!important}
-.banner .btn{background:#ff4b24!important;border-color:#ff4b24!important;color:white!important}
-.banner svg{display:none!important}
-.vision-editorial h3{color:#142b45!important;font:500 25px Poppins,Arial,sans-serif!important}
-.vision-editorial p{color:#536477!important;font:400 13px/1.8 Poppins,Arial,sans-serif!important}
-footer{border-color:#e7e4e0!important}
-footer .logo{color:#142b45!important}
-footer .logo b{background:#ff4b24!important}
-footer nav a{color:#536477!important;font:400 11px Poppins,Arial,sans-serif!important}
-.copy{color:#7a8792!important;font:400 10px Poppins,Arial,sans-serif!important}
-#lab-view .gal,#proj-view .gal,#lab-view .lsec:has(.gal),#proj-view .lsec:has(.gal),.mem .ph{display:none!important}
-#lab-view h2,#proj-view h2{color:#142b45!important;font-family:Poppins,Arial,sans-serif!important}
-#lab-view .lpanel,#proj-view .lpanel{border:0!important;border-top:1px solid #e7e4e0!important;border-radius:0!important;background:transparent!important}
-#lab-view .lpanel svg{display:none!important}
-#lab-view .lsec h3.t,#proj-view .lsec h3.t{color:#142b45!important;font:500 24px Poppins,Arial,sans-serif!important}
-#lab-view .box,#proj-view .box{border-top:1px solid #e7e4e0!important}
-@media(max-width:960px){
- .wrap{padding-left:24px!important;padding-right:24px!important}
- nav{display:none!important}
- .hero .wrap{display:block!important}
- .inspiration-list,.pillars,.projects,.team,.principles,.detail{grid-template-columns:1fr 1fr!important}
- #labs .lab-feature{grid-template-columns:1fr!important}
- #labs .lab-visual.text-visual{min-height:190px!important}
-}
-@media(max-width:650px){
- .wrap{padding-left:20px!important;padding-right:20px!important}
- .hero .wrap{padding-top:78px!important;padding-bottom:60px!important}
- h1{font-size:clamp(43px,12vw,60px)!important}
- .ecosystem-head{grid-template-columns:1fr!important;gap:8px!important}
- .inspiration-list,.pillars,.projects,.team,.principles,.detail{grid-template-columns:1fr!important}
- .pillar{padding:0!important;border:0!important}
- .team div{padding:20px 0!important;border-left:0!important}
- .team div:nth-child(n+2){border-top:1px solid #e7e4e0!important}
- .inspiration-copy{padding:24px 22px 10px!important}
- .inspiration-image.text-visual{min-height:180px!important;padding:22px!important}
- .banner{grid-template-columns:1fr!important}
- .banner .btn{grid-column:1!important;grid-row:auto!important;justify-self:start!important}
- footer .wrap{padding-left:20px!important;padding-right:20px!important}
-}
-
 </style>
 </head>
 <body>
@@ -797,22 +661,34 @@ footer nav a{color:#536477!important;font:400 11px Poppins,Arial,sans-serif!impo
 <p class="lead">A student-led lab building impactful AI solutions, advancing research, and empowering innovation — together.</p>
 <div class="cta"><a class="btn dark" href="#labs">Explore Our Labs &nbsp;→</a><a class="btn light" href="#about">Learn More</a></div>
 </div>
-<div class="hero-statement"><span>RESEARCH · EXPERIMENTATION · ENGINEERING</span><p>We study how intelligent systems work, test what they can do, and build tools that make the technology useful.</p><div class="hero-index"><b>01</b> Learn through research <i></i><b>02</b> Build through experimentation <i></i><b>03</b> Share through collaboration</div></div>
-</div></div>
+<svg class="glass" viewBox="0 0 520 440" role="img" aria-label="Glass 42 on a pedestal with an orbiting ring">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".5" stop-color="#cfd4da" stop-opacity=".55"/><stop offset="1" stop-color="#8d949c" stop-opacity=".6"/></linearGradient>
+<linearGradient id="p" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9ebee"/><stop offset="1" stop-color="#9aa0a7"/></linearGradient>
+<radialGradient id="b"><stop offset="0" stop-color="#fff"/><stop offset=".4" stop-color="#9aa0a7"/><stop offset="1" stop-color="#2b2e33"/></radialGradient>
+</defs>
+<ellipse cx="270" cy="370" rx="230" ry="38" fill="#0002" filter="blur(10px)"/>
+<path d="M40 330 L500 330 L500 352 Q270 392 40 352Z" fill="url(#p)"/>
+<ellipse cx="270" cy="330" rx="230" ry="34" fill="#f1f2f4" stroke="#fff"/>
+<text x="268" y="318" text-anchor="middle" font-family="Outfit,sans-serif" font-weight="600" font-size="320" fill="url(#g)" stroke="#fff" stroke-width="3" stroke-opacity=".9" letter-spacing="-12">42</text>
+<ellipse cx="260" cy="210" rx="270" ry="95" transform="rotate(-18 260 210)" fill="none" stroke="#9aa0a7" stroke-width="2"/>
+<circle cx="60" cy="256" r="11" fill="url(#b)"/><circle cx="190" cy="140" r="8" fill="url(#b)"/><circle cx="440" cy="110" r="9" fill="url(#b)"/>
+</svg>
+</div><a class="hero-credit" href="https://commons.wikimedia.org/wiki/File:5_Pionen_Data_Centre.tif" target="_blank" rel="noopener">Pionen data centre photograph: Simon Klose · CC BY 3.0</a></div>
 
 <section class="ecosystem" aria-label="AI research and engineering in practice">
  <div class="ecosystem-head wrap"><span class="eyebrow">RESEARCH IN PRACTICE</span><p>Exploring the tools, infrastructure, and experiments behind useful artificial intelligence.</p></div>
  <div class="inspiration-list">
   <article class="inspiration-entry">
    <div class="inspiration-copy"><span>01 / COMPUTING INFRASTRUCTURE</span><h3>The systems that make modern AI possible.</h3><p>Compute · Systems · Efficient infrastructure</p><span class="feature-caption">The infrastructure behind intelligent systems</span></div>
-   <div class="inspiration-image text-visual"><span>COMPUTING SYSTEMS / 01</span><strong>Infrastructure is part of intelligence.</strong><p>Understanding the systems behind training, inference, data, and deployment.</p><small>COMPUTE &nbsp;·&nbsp; SYSTEMS &nbsp;·&nbsp; EFFICIENCY</small></div>
+   <div class="inspiration-image"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=90" alt="Rows of servers in a modern computing data centre" loading="lazy"></div>
   </article>
   <article class="inspiration-entry">
    <div class="inspiration-copy"><span>02 / EXPERIMENTATION AND ENGINEERING</span><h3>Turning ideas into working intelligent systems.</h3><p>Prototyping · Model development · Applied research</p><span class="feature-caption">From experiments to real-world applications</span></div>
-   <div class="inspiration-image text-visual"><span>APPLIED RESEARCH / 02</span><strong>Ideas become useful when they are tested.</strong><p>From a research question to a prototype, evaluation, and a documented result.</p><small>HYPOTHESES &nbsp;·&nbsp; EXPERIMENTS &nbsp;·&nbsp; EVIDENCE</small></div>
+   <div class="inspiration-image"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=90" alt="Engineer working with technology in a research laboratory" loading="lazy"></div>
   </article>
  </div>
- 
+ <p class="image-note wrap">Independent, student-led AI research and development. The photographs illustrate general computing and engineering environments and do not represent partner institutions.</p>
 </section>
 
 <div class="wrap">
@@ -829,11 +705,11 @@ footer nav a{color:#536477!important;font:400 11px Poppins,Arial,sans-serif!impo
 <div class="labs-intro"><span class="chip">Our Labs</span><h2>Explore Our Labs</h2><p class="sub" style="font-size:17px">Focused initiatives driving innovation across key areas of AI.</p><a class="btn dark" style="margin-top:26px;padding:14px 24px;font-size:14px" href="#lab-detail">View All Labs &nbsp;→</a></div>
 <a class="lab-feature ioai-feature" href="#ioai-lab">
 <div class="lab-heading"><span class="lab-index">01 / EDUCATION &amp; OLYMPIAD PREPARATION</span><h3>IOAI Lab</h3><p>Preparing minds for AI Olympiads.</p><span class="lab-description">A structured space for learning artificial intelligence, strengthening problem-solving skills, and preparing for olympiad-style challenges.</span><span class="lab-visit">Explore IOAI Lab <b>↗</b></span></div>
-<div class="lab-visual text-visual"><span>LEARNING PATHWAY</span><strong>Concepts → implementation → problem solving</strong><p>Structured AI learning, coding practice, and olympiad-oriented preparation.</p></div>
+<div class="lab-visual"><img src="/images/projects/ioailab/Screenshot%20(184).png" alt="IOAI Lab learning platform interface" loading="lazy"></div>
 </a>
 <a class="lab-feature k2-feature" href="#k2-lab">
 <div class="lab-heading"><span class="lab-index">02 / RESEARCH &amp; EXPERIMENTATION</span><h3>K2 Horizon Lab</h3><p>Experimenting with models, methods, and applied AI.</p><span class="lab-description">An environment for exploring LLM inference, fine-tuning, evaluation, and practical AI research workflows.</span><span class="lab-visit">Explore K2 Horizon Lab <b>↗</b></span></div>
-<div class="lab-visual text-visual"><span>EXPERIMENT CYCLE</span><strong>Prepare → fine-tune → evaluate → iterate</strong><p>Model experimentation, inference workflows, benchmarking, and technical documentation.</p></div>
+<div class="lab-visual"><img src="/images/projects/thinkK2lab/Screenshot%20(182).png" alt="K2 Horizon Lab experimentation platform interface" loading="lazy"></div>
 </a>
 </div>
 
@@ -849,9 +725,9 @@ footer nav a{color:#536477!important;font:400 11px Poppins,Arial,sans-serif!impo
 <span class="chip">Projects</span><h2>Applied AI, shipped as apps</h2>
 <p class="sub">Work across agriculture, fashion, and scholarship discovery.</p>
 <div class="projects">
-<div class="box proj"><div class="project-cover-text"><span>AGRICULTURE / AI PRODUCT</span><strong>CeryS AI</strong><small>Practical AI assistance for farming decisions.</small></div><span class="tag live">Final testing · Google Play on 6 Nov 2026</span><h3><a href="#cerys-ai">CeryS AI →</a></h3><p>An agricultural assistant that helps farmers make more informed decisions, combining Google Gemini with the K2-Horizon model.</p><ul><li>Weather forecasts</li><li>AI plant disease diagnosis</li><li>Government scheme discovery</li><li>Conversational crop guidance</li></ul></div>
-<div class="box proj"><div class="project-cover-text"><span>FASHION / AI PRODUCT</span><strong>Styfi</strong><small>Personalised discovery and intelligent styling.</small></div><span class="tag">Flutter mobile app</span><h3><a href="#styfi">Styfi →</a></h3><p>A fashion marketplace that brings AI into shopping for both buyers and sellers.</p><ul><li>Virtual try-on and outfit composer</li><li>Trend detector</li><li>Seller dashboard and image enhancer</li><li>Order management and checkout</li></ul></div>
-<div class="box proj"><div class="project-cover-text"><span>EDUCATION / AI PRODUCT</span><strong>Scholira</strong><small>Scholarship discovery shaped around student profiles.</small></div><span class="tag">Flutter, cross-platform</span><h3><a href="#scholira">Scholira →</a></h3><p>Matches students with scholarships based on GPA, test scores, field of study, and target countries.</p><ul><li>Personalized recommendations</li><li>Coverage across the USA, UK, Germany, South Korea, Turkey, China, and Japan</li><li>Real-time scholarship API</li><li>iOS, Android, Web, and desktop</li></ul></div>
+<div class="box proj"><img class="project-cover" src="/images/projects/CeryS%20AI/Screenshot_20261031_193020.jpg" alt="CeryS AI application screenshot" loading="lazy"><span class="tag live">Final testing · Google Play on 6 Nov 2026</span><h3><a href="#cerys-ai">CeryS AI →</a></h3><p>An agricultural assistant that helps farmers make more informed decisions, combining Google Gemini with the K2-Horizon model.</p><ul><li>Weather forecasts</li><li>AI plant disease diagnosis</li><li>Government scheme discovery</li><li>Conversational crop guidance</li></ul></div>
+<div class="box proj"><img class="project-cover" src="/images/projects/styfi/screenshot-1.png" alt="Styfi application screenshot" loading="lazy"><span class="tag">Flutter mobile app</span><h3><a href="#styfi">Styfi →</a></h3><p>A fashion marketplace that brings AI into shopping for both buyers and sellers.</p><ul><li>Virtual try-on and outfit composer</li><li>Trend detector</li><li>Seller dashboard and image enhancer</li><li>Order management and checkout</li></ul></div>
+<div class="box proj"><img class="project-cover" src="/images/projects/scholira/screenshot-1.png" alt="Scholira application screenshot" loading="lazy"><span class="tag">Flutter, cross-platform</span><h3><a href="#scholira">Scholira →</a></h3><p>Matches students with scholarships based on GPA, test scores, field of study, and target countries.</p><ul><li>Personalized recommendations</li><li>Coverage across the USA, UK, Germany, South Korea, Turkey, China, and Japan</li><li>Real-time scholarship API</li><li>iOS, Android, Web, and desktop</li></ul></div>
 </div>
 </div></section>
 
@@ -913,7 +789,18 @@ const TEAMS=[
 {n:'Software Engineering Team',s:'2 Team Leaders · 5 Team Members',g:[['Team Leaders',['Ishimwe Bonheur','Syrin Alabrach']],['Team Members',['KALIZA Esther','Vieira Isimbi Ntwali','Kundan Kumar','Jean Pierre Hitayezu','Jackson NSANZIMANA']]]}
 ];
 const root=document.getElementById('teams');
-const TEAM_PHOTOS={};
+const TEAM_PHOTOS={
+'Muhammad Safwan Ahmad Saffi':'muhammad-safwan-ahmad-saffi.jpg',
+'Habib Bashir Lawal':'Habib Bashir Lawal.jpg',
+'Om Mahadik':'Om Mahadik.jpg',
+'Eugene Mutuyimana':'Eugene Mutuyimana.jpg',
+'Owojori Oluwajuwonlo Emmanuel':'Owojori Oluwajuwonlo Emmanuel.jpg',
+'Syrin Alabrach':'Syrin Alabrach.jpg',
+'KALIZA Esther':'KALIZA Esther.jpg',
+'Kundan Kumar':'Kundan Kumar.jpg',
+'Jean Pierre Hitayezu':'Jean Pierre Hitayezu.jpg',
+'Jackson NSANZIMANA':'Jackson NSANZIMANA.jpg'
+};
 TEAMS.forEach(t=>{
  const sec=document.createElement('section');sec.className='tm';
  sec.innerHTML='<div class="tm-h"><h3></h3><span></span></div>';
@@ -976,7 +863,7 @@ lb.querySelector('.lbp').onclick=e=>{e.stopPropagation();LB.i=(LB.i+LB.s.length-
 lb.querySelector('.lbf').onclick=e=>{e.stopPropagation();LB.i=(LB.i+1)%LB.s.length;lbShow()};
 addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')lb.hidden=true;if(e.key==='ArrowLeft')lb.querySelector('.lbp').click();if(e.key==='ArrowRight')lb.querySelector('.lbf').click()});
 function renderProj(P){
- pv.innerHTML=`<div class='wrap'><div class='lh'><a class='back' href='#projects'>← Back to projects</a><div class='lgrid'><div><div style='margin-top:28px'><span class='chip'>${P.domain}</span></div><h2>${P.name}</h2><p class='sub'>${P.tag}</p><div class='prose'>${P.intro.map(p=>`<p>${p}</p>`).join('')}</div></div><aside class='lpanel'><dl>${P.facts.map(f=>`<div><dt>${f[0]}</dt><dd>${f[1]}</dd></div>`).join('')}</dl></aside></div></div><div class='lsec text-only-preview'><h3 class='t'>How the platform is organised</h3><p class='sub'>The project pages describe the product's purpose, core capabilities, technical approach, and development direction without relying on interface screenshots.</p></div><div class='lsec'><h3 class='t'>Key features</h3><div class='areas'>${P.feat.map(c=>`<div class='box'><h3>${c[0]}</h3><p>${c[1]}</p></div>`).join('')}</div></div><div class='lsec'><h3 class='t'>Technology and development</h3><div class='box' style='margin-top:20px'><p>${P.tech}</p></div></div>${P.status?`<div class='lsec'><h3 class='t'>Development status</h3><div class='box' style='margin-top:20px'><p>${P.status}</p></div></div>`:''}<div class='vis'><h3 class='t'>Vision</h3><p>${P.vision}</p></div></div>`;
+ pv.innerHTML=`<div class='wrap'><div class='lh'><a class='back' href='#projects'>← Back to projects</a><div class='lgrid'><div><div style='margin-top:28px'><span class='chip'>${P.domain}</span></div><h2>${P.name}</h2><p class='sub'>${P.tag}</p><div class='prose'>${P.intro.map(p=>`<p>${p}</p>`).join('')}</div></div><aside class='lpanel'><dl>${P.facts.map(f=>`<div><dt>${f[0]}</dt><dd>${f[1]}</dd></div>`).join('')}</dl></aside></div></div><div class='lsec'><h3 class='t'>Platform Preview</h3><div class='gal'>${P.shots.map((s,i)=>`<button type='button'><img src='${P.dir}${s}' alt='${P.name} screenshot ${i+1}' loading='lazy'></button>`).join('')}</div></div><div class='lsec'><h3 class='t'>Key features</h3><div class='areas'>${P.feat.map(c=>`<div class='box'><h3>${c[0]}</h3><p>${c[1]}</p></div>`).join('')}</div></div><div class='lsec'><h3 class='t'>Technology and development</h3><div class='box' style='margin-top:20px'><p>${P.tech}</p></div></div>${P.status?`<div class='lsec'><h3 class='t'>Development status</h3><div class='box' style='margin-top:20px'><p>${P.status}</p></div></div>`:''}<div class='vis'><h3 class='t'>Vision</h3><p>${P.vision}</p></div></div>`;
  const btns=[...pv.querySelectorAll('.gal button')];
  btns.forEach((b,i)=>{const im=b.querySelector('img');
   im.addEventListener('error',()=>{b.outerHTML=`<div class='miss'>${P.shots[i]}</div>`});
@@ -987,7 +874,7 @@ function panel(L){
  return `<aside class='lpanel'><svg viewBox='0 0 400 170' fill='none' stroke='currentColor' stroke-width='1' aria-hidden='true' style='color:var(--mute)'><path d='M40 120L120 50L200 100L280 40L360 110M120 50L200 140L280 40M40 120L200 140L360 110M200 100L360 110' opacity='.5'/><circle cx='40' cy='120' r='6' fill='currentColor'/><circle cx='120' cy='50' r='8' fill='currentColor'/><circle cx='200' cy='100' r='10' fill='currentColor'/><circle cx='280' cy='40' r='7' fill='currentColor'/><circle cx='360' cy='110' r='6' fill='currentColor'/><circle cx='200' cy='140' r='5' fill='currentColor'/></svg><dl><div><dt>Part of</dt><dd>Think 42 AI Labs</dd></div><div><dt>Built for</dt><dd>${L.aud}</dd></div><div><dt>Focus</dt><dd>${L.foc}</dd></div><div><dt>Core areas</dt><dd>${L.core.length}</dd></div></dl></aside>`;
 }
 function renderLab(L){
- lv.innerHTML=`<div class='wrap'><div class='lh'><a class='back' href='#labs'>← Back to labs</a><div class='lgrid'><div><div style='margin-top:28px'><span class='chip'>Lab</span></div><h2>${L.name}</h2><p class='sub'>${L.tag}</p><div class='prose'>${L.intro.map(p=>`<p>${p}</p>`).join('')}</div><div class='lcta'><a class='btn dark' href='${L.url}' target='_blank' rel='noopener'>Visit ${L.name} ↗</a><a class='btn light' href='#labs'>All labs</a></div></div>${panel(L)}</div></div><div class='lsec text-only-preview'><h3 class='t'>How the platform is organised</h3><p class='sub'>The project pages describe the product's purpose, core capabilities, technical approach, and development direction without relying on interface screenshots.</p></div><div class='lsec'><h3 class='t'>Core areas</h3><div class='areas'>${L.core.map(c=>`<div class='box'><h3>${c[0]}</h3><p>${c[1]}</p></div>`).join('')}</div></div><div class='lsec'><h3 class='t'>${L.focusT}</h3><div class='box' style='margin-top:20px'><p>${L.focusI}</p><ul class='two'>${L.focus.map(f=>`<li>${f}</li>`).join('')}</ul></div></div><div class='vis'><h3 class='t'>Long-term vision</h3>${L.vision.map(p=>`<p>${p}</p>`).join('')}</div></div>`;
+ lv.innerHTML=`<div class='wrap'><div class='lh'><a class='back' href='#labs'>← Back to labs</a><div class='lgrid'><div><div style='margin-top:28px'><span class='chip'>Lab</span></div><h2>${L.name}</h2><p class='sub'>${L.tag}</p><div class='prose'>${L.intro.map(p=>`<p>${p}</p>`).join('')}</div><div class='lcta'><a class='btn dark' href='${L.url}' target='_blank' rel='noopener'>Visit ${L.name} ↗</a><a class='btn light' href='#labs'>All labs</a></div></div>${panel(L)}</div></div><div class='lsec'><h3 class='t'>Platform Preview</h3><div class='gal'>${L.shots.map((shot,i)=>`<button type='button'><img src='${L.dir}${encodeURIComponent(shot)}' alt='${L.name} screenshot ${i+1}' loading='lazy'></button>`).join('')}</div></div><div class='lsec'><h3 class='t'>Core areas</h3><div class='areas'>${L.core.map(c=>`<div class='box'><h3>${c[0]}</h3><p>${c[1]}</p></div>`).join('')}</div></div><div class='lsec'><h3 class='t'>${L.focusT}</h3><div class='box' style='margin-top:20px'><p>${L.focusI}</p><ul class='two'>${L.focus.map(f=>`<li>${f}</li>`).join('')}</ul></div></div><div class='vis'><h3 class='t'>Long-term vision</h3>${L.vision.map(p=>`<p>${p}</p>`).join('')}</div></div>`;
  const btns=[...lv.querySelectorAll('.gal button')];
  btns.forEach((b,i)=>{const im=b.querySelector('img');im.addEventListener('click',()=>{LB.s=[...lv.querySelectorAll('.gal img')].map(x=>x.src);LB.i=i;lbShow()});im.addEventListener('error',()=>{b.outerHTML=`<div class='miss'>${L.shots[i]}</div>`})});
 }
