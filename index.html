@@ -970,6 +970,83 @@ body>main#home>.wrap:has(>.pillars){
  .pillars{grid-template-columns:1fr!important}
 }
 
+
+/* One shared page grid: Labs, feature icons and every other section use .wrap */
+#labs>.wrap,
+body>main#home>.wrap:has(>.pillars){
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:1280px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:40px!important;
+  padding-right:40px!important;
+}
+#labs .labs-editorial{width:100%!important;max-width:none!important}
+#labs .labs-intro{
+  box-sizing:border-box!important;
+  width:100%!important;max-width:none!important;
+  margin:0 0 54px!important;
+  padding:0!important;
+}
+#labs .labs-intro h2,
+#labs .labs-intro .chip,
+#labs .labs-intro .sub,
+#labs .labs-intro .btn{margin-left:0!important}
+#labs .lab-feature{
+  box-sizing:border-box!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  align-items:center!important;
+  gap:clamp(28px,5vw,72px)!important;
+  width:100%!important;max-width:none!important;
+  margin:0 0 64px!important;
+  padding:36px 0!important;
+}
+#labs .lab-heading{
+  box-sizing:border-box!important;
+  width:100%!important;max-width:none!important;
+  margin:0!important;padding:0!important;
+}
+#labs .lab-visual{
+  box-sizing:border-box!important;
+  width:100%!important;max-width:none!important;
+  height:clamp(260px,30vw,440px)!important;
+  min-height:0!important;max-height:440px!important;
+  margin:0!important;padding:0!important;
+  border-radius:4px!important;overflow:hidden!important;
+}
+#labs .lab-visual img{
+  display:block!important;width:100%!important;height:100%!important;
+  max-height:none!important;object-fit:contain!important;object-position:center!important;
+}
+.pillars{
+  box-sizing:border-box!important;
+  width:100%!important;max-width:none!important;
+  margin:0!important;padding:44px 0 70px!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+}
+.pillar{padding-left:22px!important;padding-right:22px!important}
+.pillar:first-child{padding-left:0!important}
+.pillar svg{margin-left:0!important}
+@media(max-width:960px){
+ #labs>.wrap,body>main#home>.wrap:has(>.pillars){
+  padding-left:22px!important;padding-right:22px!important;
+ }
+ #labs .lab-feature{gap:28px!important}
+}
+@media(max-width:700px){
+ #labs .labs-intro{margin-bottom:38px!important}
+ #labs .lab-feature{
+  grid-template-columns:1fr!important;gap:22px!important;
+  padding:28px 0!important;margin-bottom:42px!important;
+ }
+ #labs .lab-visual{height:250px!important;max-height:250px!important}
+ .pillars{grid-template-columns:1fr 1fr!important;padding:36px 0 52px!important;gap:26px 18px!important}
+ .pillar,.pillar:first-child{padding:0!important;border:0!important}
+}
+@media(max-width:520px){.pillars{grid-template-columns:1fr!important}}
+
 </style>
 </head>
 <body>
