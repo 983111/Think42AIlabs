@@ -895,6 +895,81 @@ footer .copy span{white-space:nowrap!important}
  .proj .project-cover{height:210px!important}
 }
 
+
+/* Final left-edge alignment for Labs heading, feature icons, and lab rows */
+#labs{padding-left:0!important;padding-right:0!important}
+#labs>.wrap{
+  width:100%!important;max-width:none!important;
+  margin:0!important;padding-left:0!important;padding-right:0!important;
+}
+#labs .labs-editorial{width:100%!important;max-width:none!important}
+#labs .labs-intro{
+  width:100%!important;max-width:none!important;
+  margin:0 0 74px!important;
+  padding:0 24px!important;
+}
+#labs .labs-intro .chip,
+#labs .labs-intro h2,
+#labs .labs-intro .sub,
+#labs .labs-intro .btn{margin-left:0!important}
+#labs .labs-intro h2{max-width:900px!important}
+#labs .lab-feature{
+  display:grid!important;
+  grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr)!important;
+  align-items:center!important;
+  gap:clamp(24px,4vw,64px)!important;
+  width:100%!important;max-width:none!important;
+  margin:0 0 74px!important;
+  padding:34px 0 34px 24px!important;
+}
+#labs .lab-heading{
+  width:100%!important;max-width:760px!important;
+  padding:0!important;margin:0!important;
+}
+#labs .lab-visual{
+  width:100%!important;max-width:none!important;
+  height:clamp(280px,35vw,500px)!important;
+  min-height:0!important;max-height:500px!important;
+  aspect-ratio:auto!important;margin:0!important;
+  border-radius:0!important;overflow:hidden!important;
+}
+#labs .lab-visual img{
+  width:100%!important;height:100%!important;
+  max-height:none!important;object-fit:contain!important;
+  object-position:center!important;
+}
+#labs .detail{margin-left:24px!important;margin-right:24px!important}
+body>main#home>.wrap:has(>.pillars){
+  width:100%!important;max-width:none!important;
+  margin:0!important;padding:0!important;
+}
+.pillars{
+  width:100%!important;max-width:none!important;
+  padding:44px 24px 70px!important;
+  margin:0!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+}
+.pillar{padding-left:24px!important;padding-right:18px!important}
+.pillar:first-child{padding-left:0!important}
+.pillar svg{margin-left:0!important;flex:none!important}
+@media(max-width:700px){
+ #labs .labs-intro{padding:0 22px!important;margin-bottom:42px!important}
+ #labs .lab-feature{
+  grid-template-columns:1fr!important;
+  gap:22px!important;padding:28px 0 28px 22px!important;
+  margin-bottom:48px!important;
+ }
+ #labs .lab-heading{padding-right:22px!important}
+ #labs .lab-visual{height:250px!important;max-height:250px!important}
+ #labs .detail{margin-left:22px!important;margin-right:22px!important}
+ .pillars{grid-template-columns:1fr 1fr!important;padding:36px 22px 52px!important;gap:26px 18px!important}
+ .pillar{padding:0!important;border:0!important}
+ .pillar:first-child{padding-left:0!important}
+}
+@media(max-width:420px){
+ .pillars{grid-template-columns:1fr!important}
+}
+
 </style>
 </head>
 <body>
