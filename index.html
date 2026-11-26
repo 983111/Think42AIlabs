@@ -783,6 +783,43 @@ footer nav a{color:#5f6368!important}
  footer .nav{height:auto!important}
 }
 
+
+/* Follow-up refinements: restore real project imagery and correct footer flow */
+.inspiration-image{position:relative!important;display:block!important;min-height:260px!important;height:auto!important;aspect-ratio:16/9!important;max-height:560px!important;padding:0!important;overflow:hidden!important;background:#f1f3f4!important;border-radius:0!important}
+.inspiration-image img{display:block!important;position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-height:none!important;object-fit:cover!important;object-position:center!important;filter:saturate(.82)!important}
+.inspiration-image:before,.inspiration-image:after{display:none!important;content:none!important}
+#labs .lab-visual{position:relative!important;display:flex!important;align-items:center!important;justify-content:center!important;min-height:260px!important;height:auto!important;max-height:420px!important;aspect-ratio:16/9!important;padding:0!important;overflow:hidden!important;background:#f1f3f4!important;border-radius:4px!important}
+#labs .lab-visual img{display:block!important;position:relative!important;inset:auto!important;width:100%!important;height:100%!important;max-height:420px!important;object-fit:contain!important;object-position:center!important}
+#labs .lab-visual:before,#labs .lab-visual:after{display:none!important;content:none!important}
+.proj .project-cover{display:block!important;width:100%!important;height:230px!important;object-fit:cover!important;object-position:top center!important;border-radius:4px!important;margin:0 0 20px!important;background:#f1f3f4!important}
+.proj:before{display:none!important;content:none!important}
+#lab-view .gal,#proj-view .gal{display:flex!important}
+#lab-view .gal img,#proj-view .gal img{display:block!important;max-height:380px!important;object-fit:contain!important}
+#lab-view .gal .miss,#proj-view .gal .miss{display:grid!important}
+footer{margin-top:70px!important;border-top:1px solid #e8eaed!important;background:#fff!important}
+footer .wrap{padding-top:26px!important;padding-bottom:0!important}
+footer .footer-top{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:28px!important;min-height:76px!important;padding:0 0 22px!important}
+footer .footer-top .logo{flex:none!important}
+footer .footer-top nav{display:block!important;min-width:0!important}
+footer .footer-top nav ul{display:flex!important;align-items:center!important;justify-content:flex-end!important;flex-wrap:wrap!important;gap:10px 26px!important;list-style:none!important;padding:0!important;margin:0!important}
+footer .footer-top nav li{display:block!important;margin:0!important;padding:0!important}
+footer .footer-top nav a{display:inline-block!important;padding:5px 0!important;line-height:1.5!important;white-space:nowrap!important;border:0!important;color:#5f6368!important;font:400 12px/1.5 'Google Sans',Arial,sans-serif!important}
+footer .footer-top nav a:hover{color:#1a73e8!important}
+footer .copy{display:flex!important;align-items:center!important;justify-content:flex-start!important;flex-wrap:wrap!important;gap:7px 20px!important;margin:0!important;padding:17px 0 25px!important;border-top:1px solid #e8eaed!important;color:#80868b!important;font:400 11px/1.8 'Google Sans Text',Arial,sans-serif!important}
+footer .copy a{display:inline-block!important;color:#5f6368!important;text-decoration:underline!important;text-decoration-color:#dadce0!important;text-underline-offset:3px!important;white-space:nowrap!important}
+footer .copy span{white-space:nowrap!important}
+@media(max-width:900px){
+ footer .footer-top{align-items:flex-start!important;flex-direction:column!important;gap:20px!important;padding-bottom:18px!important}
+ footer .footer-top nav ul{justify-content:flex-start!important;gap:8px 20px!important}
+}
+@media(max-width:600px){
+ .inspiration-image{min-height:180px!important}
+ #labs .lab-visual{min-height:180px!important}
+ .proj .project-cover{height:210px!important}
+ footer .wrap{padding-left:22px!important;padding-right:22px!important}
+ footer .copy{gap:6px 14px!important}
+}
+
 </style>
 </head>
 <body>
@@ -801,7 +838,7 @@ footer nav a{color:#5f6368!important}
 <div class="hero"><div class="wrap">
 <div>
 <span class="chip">THINK 42 AI LABS · INDEPENDENT AI RESEARCH</span>
-<h1>Research,<br><span>into reality.</span></h1>
+<h1>Ideas, explored.<br><span>AI, applied.</span></h1>
 <p class="lead">We explore intelligent systems, test ideas through rigorous experimentation, and build AI that addresses real problems.</p>
 <div class="cta"><a class="btn dark" href="#labs">Explore Our Labs &nbsp;→</a><a class="btn light" href="#about">Learn More</a></div>
 </div>
@@ -919,12 +956,11 @@ footer nav a{color:#5f6368!important}
 <div id="teams"></div>
 </div></main>
 <footer><div class="wrap">
-<div class="nav">
+<div class="footer-top">
 <a class="logo" href="#home"><b>42</b><i></i>Think 42 AI Labs</a>
-<nav style="display:block"><ul><li><a href="#home">Home</a></li><li><a href="#labs">Labs</a></li><li><a href="#projects">Projects</a></li><li><a href="#team">Resources</a></li><li><a href="#about">About</a></li><li><a href="/founder">Founder</a></li><li><a href="#members">Members</a></li></ul></nav>
-
+<nav aria-label="Footer navigation"><ul><li><a href="#home">Home</a></li><li><a href="#labs">Labs</a></li><li><a href="#projects">Projects</a></li><li><a href="#team">Resources</a></li><li><a href="#about">About</a></li><li><a href="/founder">Founder</a></li><li><a href="#members">Members</a></li></ul></nav>
 </div>
-<p class="copy">© 2026 Think 42 AI Labs · think42ailabs.me · <a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms of Service</a> · <a href="mailto:team@think42ailabs.me">team@think42ailabs.me</a></p>
+<p class="copy"><span>© 2026 Think 42 AI Labs</span><span>think42ailabs.me</span><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a><a href="mailto:team@think42ailabs.me">team@think42ailabs.me</a></p>
 </div></footer>
 <script>
 const TEAMS=[
